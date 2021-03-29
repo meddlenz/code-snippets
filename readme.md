@@ -1,5 +1,7 @@
 
 # Code Snippets
+A selectoin of handy snippets
+
 ## HTML
 #### Social <meta> tags
 ```
