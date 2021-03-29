@@ -1,6 +1,7 @@
 
 # Code Snippets
-### Social <meta> tags
+## HTML
+#### Social <meta> tags
 ```
 <meta property="og:title" content="INSERT_CONTENT">
 <meta property="og:description" content="INSERT_CONTENT">
@@ -13,3 +14,6 @@
 <meta property="og:site_name" content="INSERT_CONTENT">
 <meta name="twitter:image:alt" content="INSERT_CONTENT">
 ```
+
+## CSS
+## JS
