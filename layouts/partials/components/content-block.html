@@ -1,0 +1,8 @@
+{{ $c := "c-content-block" }}
+<div class="{{$c}}">
+		<h1 class="component-heading">{{ .heading }}</h1>
+
+	<div class="{{$c}}__content">
+		{{ .content_html | safeHTML }}
+	</div>
+</div>

@@ -1,0 +1,7 @@
+{{ $c := "c-header" }}
+
+<div class="{{$c}}">
+	{{ if isset .Params "heading" }}
+		<h1>{{ .Params.heading }}</h1>
+	{{ end }}
+</div>

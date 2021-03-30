@@ -1,0 +1,25 @@
+baseURL: "http://example.org/"
+
+permalinks:
+  posts: /:year/:month/:title/
+
+_array_structures:
+  page_sections:
+    - label: Page Section
+      icon: burst_mode
+      value:
+        label:
+        section_heading:
+        components:
+
+  components:
+    style: modal
+    values:
+      - label: Content Block
+        icon: event_available
+        image:
+        value:
+          _component_type: Content Block
+          label: Content Block
+          heading: Content Block
+          content_html:
