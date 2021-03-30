@@ -7,11 +7,11 @@ params:
   permalinks:
     posts: /:year/:month/:title/
     web_pages: /:title/
-  _explore:
-    groups:
-      - heading: Web Pages
-        collections:
-          - web_pages
+  # _explore:
+  #   groups:
+  #     - heading: Web Pages
+  #       collections:
+  #         - web_pages
 
 
 _array_structures:
