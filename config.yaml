@@ -7,7 +7,7 @@ _explore:
   groups:
     - heading: Web Pages
       collections:
-        - web-pages
+        - web_pages
 
 
 _array_structures:
