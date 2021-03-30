@@ -8,6 +8,7 @@ _explore:
     - heading: Web Pages
       collections:
         - web_pages
+        - blog
 
 
 _array_structures:
