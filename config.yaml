@@ -3,6 +3,13 @@ baseURL: "http://example.org/"
 permalinks:
   posts: /:year/:month/:title/
 
+_explore:
+  groups:
+    - heading: Pages
+      collections:
+        - web-pages
+
+
 _array_structures:
   page_sections:
     - label: Page Section
