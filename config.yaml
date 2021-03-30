@@ -5,7 +5,7 @@ permalinks:
 
 _explore:
   groups:
-    - heading: Pages
+    - heading: Web Pages
       collections:
         - web-pages
 
