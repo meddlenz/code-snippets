@@ -2,45 +2,35 @@ baseURL: "http://example.org/"
 
 
 
-permalinks:
-  posts: /:year/:month/:title/
-  web_pages: /:title/
 
 params:
+  permalinks:
+    posts: /:year/:month/:title/
+    web_pages: /:title/
   _explore:
     groups:
       - heading: Web Pages
         collections:
           - web_pages
 
-  defaults:
-  -
-    scope:
-      type: web_pages
-      path: _web_pages/index.html
+
+_array_structures:
+  page_sections:
+    - label: Page Section
+      icon: burst_mode
+      value:
+        label:
+        section_heading:
+        components:
+
+  components:
+    style: modal
     values:
-      permalink: /
-  
-  _array_structures:
-    page_sections:
-      - label: Page Section
-        icon: burst_mode
+      - label: Content Block
+        icon: event_available
+        image:
         value:
-          label:
-          section_heading:
-          components:
-
-    components:
-      style: modal
-      values:
-        - label: Content Block
-          icon: event_available
-          image:
-          value:
-            _component_type: Content Block
-            label: Content Block
-            heading: Content Block
-            content_html:
-
-
-  
+          _component_type: Content Block
+          label: Content Block
+          heading: Content Block
+          content_html:
