@@ -12,6 +12,15 @@ params:
       - heading: Web Pages
         collections:
           - web_pages
+
+  defaults:
+  -
+    scope:
+      type: web_pages
+      path: _web_pages/index.html
+    values:
+      permalink: /
+  
   _array_structures:
     page_sections:
       - label: Page Section
