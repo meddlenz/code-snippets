@@ -3,7 +3,11 @@ baseURL: "http://example.org/"
 permalinks:
   posts: /:year/:month/:title/
 
-
+_explore:
+  groups:
+    - heading: Web Pages
+      collections:
+        - web_pages
 
 
 _array_structures:
