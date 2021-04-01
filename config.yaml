@@ -7,11 +7,11 @@ permalinks:
   web_pages: /:title/
 
 params:
-  _explore:
-    groups:
-      - heading: Web Pages
-        collections:
-          - web_pages
+  # _explore:
+  #   groups:
+  #     - heading: Web Pages
+  #       collections:
+  #         - web_pages
 
 
 _array_structures:
