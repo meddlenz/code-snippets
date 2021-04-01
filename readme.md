@@ -20,3 +20,30 @@ A selectoin of handy snippets
 ## CSS
 ## JS
 dev.meddle.co.nz
+
+
+
+
+{{ .Params.Test_html | markdownify }}  
+
+
+
+
+
+    {{ $components := .Params.components }}
+    {{ if isset .Params "page_sections" }}
+        {{ range $section := .Params.page_sections }}
+            <div class="page-section">
+                {{ if isset $section "section_heading" }}
+                        <h1>{{ $section.section_heading }}</h1>
+                {{ end }}
+                <div class="components">
+                    {{ if isset $section "components" }}
+                        {{ range $component := $section.components }}
+                            {{ partial "components/content-block.html" . }}
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    {{ end }}
