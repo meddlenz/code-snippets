@@ -1,12 +1,12 @@
 baseURL: "http://example.org/"
 
+sectionPagesMenu: "navigation"
 
-
+permalinks:
+  posts: /:year/:month/:title/
+  web_pages: /:title/
 
 params:
-  permalinks:
-    posts: /:year/:month/:title/
-    web_pages: /:title/
   # _explore:
   #   groups:
   #     - heading: Web Pages

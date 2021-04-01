@@ -1,0 +1,10 @@
+{{/* This layout serves only web_pages/index.html at the root directory () */}}
+
+{{ define "main" }}
+
+	{{ with site.GetPage "web_pages/home.html" }}
+		<h1>{{ .Title }}</h1>
+		{{ .Content }}
+	{{ end }}
+
+{{ end }}

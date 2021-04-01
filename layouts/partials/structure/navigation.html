@@ -1,0 +1,20 @@
+{{ $c := "c-navigation" }}
+
+<div class="{{$c}}">
+	<ul class="{{$c}}__nav-items">
+		{{ range .Site.RegularPages }}
+			{{ $relative_url := relURL .Permalink }}
+			{{ if eq $relative_url "/home/" }}
+			    <li>
+			        <a href="/">{{ .Title }}</a>
+			    </li>
+			{{ else }}
+			    <li>
+			        <a href="{{ absURL .Permalink }}">{{ .Title }}</a>
+			    </li>
+			{{ end }}
+	    {{ end }}
+	</ul>
+</footer>
+
+

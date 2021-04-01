@@ -1,20 +1,15 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{ partial "structure/head" . }}
 
-  {{ partial "seo" .}}
-
-  <!-- Custom css -->
-  {{ $custom := resources.Get "sass/root.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
-  <link rel="stylesheet" href="{{ $custom.Permalink }}">
-</head>
 <body>
-  {{ partial "header" . }}
-  {{ block "main" . }}{{ end }}
-  {{ partial "footer" . }}
-  {{ $js := resources.Get "js/main.js" | js.Build }}
-  <script src="{{ $js.Permalink }}"></script>
+	{{ partial "structure/header" . }}
+	{{ partial "structure/navigation" . }}
+
+	{{ block "main" . }}{{ end }}
+
+	{{ partial "structure/footer" . }}
+	{{ partial "structure/scripts" . }}
 </body>
 </html>
+
