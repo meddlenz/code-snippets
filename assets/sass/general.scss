@@ -1,0 +1,39 @@
+
+
+html {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-family: Helvetica;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-color: $primary_1;
+	color: $primary_3;
+}
+
+h1, h2, h3, h4, h5 {
+	color: $primary_2;
+	line-height: 120%;
+}
+
+a {
+	color: $primary_4;
+	text-decoration: none;
+}
+
+.body-wrapper {
+	@include scale-custom(margin-left, 225px, $nav_width, $mid-breakpoint, $max-breakpoint);
+	@include scale-custom(padding, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
+	
+	@include tablet {
+		margin-left: 0;
+	}
+}
+
+section {
+	padding: 80px 35px;
+}

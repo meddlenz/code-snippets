@@ -1,0 +1,8 @@
+.c-footer {
+	@include scale-custom(margin-left, 225px, $nav_width, $mid-breakpoint, $max-breakpoint);
+	@include scale-custom(padding, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
+	
+	@include tablet {
+		margin-left: 0;
+	}
+}

@@ -3,12 +3,15 @@
 	{{ partial "structure/head" . }}
 
 <body>
-	{{ partial "structure/header" . }}
-	{{ partial "structure/navigation" . }}
+	{{ $relative_url := relURL .Permalink }}
+	{{ if eq $relative_url "/" }}
 
-	{{ block "main" . }}{{ end }}
-
-	{{ partial "structure/footer" . }}
+		{{ with site.GetPage "web_pages/home.md" }}
+			{{ partial "structure/body-structure" . }}
+		{{ end }}
+	{{ else }}
+		{{ partial "structure/body-structure" . }}
+	{{ end }}
 	{{ partial "structure/scripts" . }}
 </body>
 </html>

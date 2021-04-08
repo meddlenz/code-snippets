@@ -1,0 +1,9 @@
+{{ partial "structure/header" . }}
+{{ partial "structure/navigation" . }}
+
+<div class="body-wrapper">
+	{{ block "main" . }}{{ .Content }}{{ end }}
+{{ partial "structure/page-components" . }}
+</div>
+
+{{ partial "structure/footer" . }}

@@ -1,4 +1,9 @@
 @charset "utf-8";
 
-@import "modules/variables";
-@import "modules/general";
+@import "variables";
+@import "mixins/breakpoint-mixins";
+@import "mixins/scale-custom";
+@import "general";
+@import "structure/header";
+@import "structure/navigation";
+@import "structure/footer";

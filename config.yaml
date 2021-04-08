@@ -1,7 +1,5 @@
 baseURL: "http://example.org/"
 
-sectionPagesMenu: "navigation"
-
 permalinks:
   posts: /:year/:month/:title/
   web_pages: /:title/
