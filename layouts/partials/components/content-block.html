@@ -1,5 +1,9 @@
 {{ $c := "c-content-block" }}
-<div class="{{$c}} component">
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ $section_count }}].components[{{ $component_count }}]">
 	<h1 class="component-heading">{{ .heading }}</h1>
 
 	<div class="{{$c}}__content">
