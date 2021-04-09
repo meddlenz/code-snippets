@@ -78,4 +78,6 @@ page_sections:
           laborum</li><li>Exercitation ullamco laboris nisi ut aliquip ex
           ea</li></ul>
 _hide_content: true
+_enabled_editors:
+  - visual
 ---
