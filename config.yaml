@@ -5,11 +5,15 @@ permalinks:
   web_pages: /:title/
 
 params:
-  # _explore:
-  #   groups:
-  #     - heading: Web Pages
-  #       collections:
-  #         - web_pages
+  _explore:
+    groups:
+      - heading: Web Pages
+        collections:
+          - web_pages
+          - posts
+      - heading: Website Settings
+        collections:
+          - data
 
 
 _array_structures:

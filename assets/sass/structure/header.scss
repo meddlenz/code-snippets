@@ -1,4 +1,5 @@
 .c-header {
+	margin-top: 15px;
 	@include scale-custom(margin-left, 225px, $nav_width, $mid-breakpoint, $max-breakpoint);
 	@include scale-custom(padding, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
 	@include scale-custom(padding-top, ($body_min_padding * 2), ($body_max_padding * 2), $min-breakpoint, $max-breakpoint);

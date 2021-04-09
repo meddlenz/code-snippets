@@ -3,16 +3,18 @@
 	{{ partial "structure/head" . }}
 
 <body>
-	{{ $relative_url := relURL .Permalink }}
-	{{ if eq $relative_url "/" }}
+	<div class="body-wrapper">
+		{{ $relative_url := relURL .Permalink }}
+		{{ if eq $relative_url "/" }}
 
-		{{ with site.GetPage "web_pages/home.md" }}
+			{{ with site.GetPage "web_pages/home.md" }}
+				{{ partial "structure/body-structure" . }}
+			{{ end }}
+		{{ else }}
 			{{ partial "structure/body-structure" . }}
 		{{ end }}
-	{{ else }}
-		{{ partial "structure/body-structure" . }}
-	{{ end }}
-	{{ partial "structure/scripts" . }}
+		{{ partial "structure/scripts" . }}
+	</div>
 </body>
 </html>
 

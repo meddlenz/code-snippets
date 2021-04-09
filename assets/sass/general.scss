@@ -20,18 +20,65 @@ h1, h2, h3, h4, h5 {
 	line-height: 120%;
 }
 
+h2 {
+	font-size: 30px;
+}
+
 a {
 	color: $primary_4;
 	text-decoration: none;
 }
 
 .body-wrapper {
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+.content-wrapper {
 	@include scale-custom(margin-left, 225px, $nav_width, $mid-breakpoint, $max-breakpoint);
-	@include scale-custom(padding, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
+	@include scale-custom(padding-left, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
+	@include scale-custom(padding-right, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
+	@include scale-custom(padding-bottom, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
+	line-height: 140%;
 	
 	@include tablet {
 		margin-left: 0;
 	}
+
+	a {
+		position: relative;
+		transition: color 0.2s ease-in-out;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+		}
+
+
+		&:hover {
+			color: $primary_3;
+			transition: color 0.2s ease-in-out;
+
+			&:after {
+				border-bottom: 4px solid red;
+			}
+		}
+	}
+}
+
+.section-heading {
+	display: inline-block;
+	border-bottom: 4px solid $primary_2;
+	@include scale-custom(font-size, 30px, 38px, $min-breakpoint, $max-breakpoint);
+}
+
+.component {
+	margin-bottom: 75px;
+}
+
+.component-heading {
+	@include scale-custom(font-size, 22px, 30px, $min-breakpoint, $max-breakpoint);
 }
 
 section {
