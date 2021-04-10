@@ -1,12 +1,12 @@
 ---
+draft: true
 title:
 header:
   heading:
   description:
-date:  {{ .Date }}
+date:
 category:
 author:
-draft: true
 page_sections:
 _hide_content: true
 _enabled_editors:
