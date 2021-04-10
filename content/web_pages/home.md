@@ -22,7 +22,9 @@ page_sections:
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
           nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
           in culpa qui officia deserunt mollit anim id est laborum.<img
-          src="/home/george.gif" width="128" height="128" /></p><p><img
+          width="128" height="128" src="/home/george.gif" /><img
+          src="/home/image-1-copy.png" width="199" height="199" /><img
+          width="620" height="621" src="/home/hank.png" /></p><p><img
           width="313" height="313" src="/uploads/home/arnold-junior.gif"
           /></p><p><img width="215" height="215"
           src="/images/uploads/home/gallery-1461240265-arnold-schwarzenegger-2.jpg"
