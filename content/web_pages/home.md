@@ -21,12 +21,13 @@ page_sections:
           aliquip ex ea <strong>commodo consequat</strong>. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
           nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-          in culpa qui officia deserunt mollit anim id est
-          laborum.</p><h4>Centered</h4><p>Lorem <a target="_blank"
-          rel="noopener" href="/page-2/">ipsum dolor </a>sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam,<em> quis nostrud
-          </em>exercitation ullamco laboris nisi ut aliquip ex ea
+          in culpa qui officia deserunt mollit anim id est laborum.</p><p><img
+          src="/images/uploads/home/gallery-1461240265-arnold-schwarzenegger-2.jpg"
+          width="215" height="215" /></p><h4>Centered</h4><p>Lorem <a
+          target="_blank" rel="noopener" href="/page-2/">ipsum dolor </a>sit
+          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam,<em> quis
+          nostrud </em>exercitation ullamco laboris nisi ut aliquip ex ea
           <strong>commodo consequat</strong>. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
@@ -60,9 +61,8 @@ page_sections:
           culpa</td></tr><tr><td>dolore eu fugiat nulla pariatur</td><td>non
           proident</td><td>Ut enim ad minim veniam</td></tr><tr><td>consectetur
           adipiscing elit</td><td>fugiat nulla pariatur</td><td>Excepteur sint
-          occaecat cupidatat</td></tr></tbody></table><p><img
-          src="/images/uploads/home/ezgif-com-crop.gif" width="174" height="179"
-          /></p>
+          occaecat cupidatat</td></tr></tbody></table><p><img width="174"
+          height="179" src="/images/uploads/home/ezgif-com-crop.gif" /></p>
       - _component_type: Content Block
         label: Building a Hugo Website
         heading: Building a Hugo Website
