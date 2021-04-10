@@ -1,6 +1,9 @@
 {{ $c := "c-header" }}
 
-<div class="{{$c}}">
+<div class="{{$c}}
+        	cms-editor-link" 
+     data-cms-editor-link-style="modal" 
+     data-cms-editor-link="cloudcannon:#header">
 	{{ if .Params.header.heading }}
 		<h1 class="{{$c}}__main-heading">{{ .Params.header.heading }}</h1>
 	{{ end }}
