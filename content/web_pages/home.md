@@ -21,8 +21,9 @@ page_sections:
           aliquip ex ea <strong>commodo consequat</strong>. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
           nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-          in culpa qui officia deserunt mollit anim id est laborum.</p><p><img
-          src="/uploads/home/arnold-junior.gif" width="313" height="313"
+          in culpa qui officia deserunt mollit anim id est laborum.<img
+          src="/home/george.gif" width="128" height="128" /></p><p><img
+          width="313" height="313" src="/uploads/home/arnold-junior.gif"
           /></p><p><img width="215" height="215"
           src="/images/uploads/home/gallery-1461240265-arnold-schwarzenegger-2.jpg"
           /></p><h4>Centered</h4><p>Lorem <a target="_blank" rel="noopener"
