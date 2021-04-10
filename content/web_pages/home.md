@@ -60,8 +60,9 @@ page_sections:
           culpa</td></tr><tr><td>dolore eu fugiat nulla pariatur</td><td>non
           proident</td><td>Ut enim ad minim veniam</td></tr><tr><td>consectetur
           adipiscing elit</td><td>fugiat nulla pariatur</td><td>Excepteur sint
-          occaecat cupidatat</td></tr></tbody></table><p><img width="174"
-          height="179" src="/images/uploads/home/ezgif-com-crop.gif" /></p>
+          occaecat cupidatat</td></tr></tbody></table><p><img
+          src="/images/uploads/home/ezgif-com-crop.gif" width="174" height="179"
+          /></p>
       - _component_type: Content Block
         label: Building a Hugo Website
         heading: Building a Hugo Website
