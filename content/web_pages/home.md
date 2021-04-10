@@ -53,14 +53,15 @@ page_sections:
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
           enim ad minim veniam,<em> quis nostrud </em>exercitation ullamco
           laboris nisi ut aliquip ex ea <strong>commodo
-          consequat</strong>.</p></blockquote><table><tbody><tr><td>Excepteur
+          consequat</strong>.</p></blockquote><table><caption>Caption</caption><thead><tr><th
+          scope="col">Honk</th><th scope="col">Honk</th><th
+          scope="col">Honk</th></tr></thead><tbody><tr><td>Excepteur
           sint</td><td>voluptate velit esse</td><td>sunt in
           culpa</td></tr><tr><td>dolore eu fugiat nulla pariatur</td><td>non
           proident</td><td>Ut enim ad minim veniam</td></tr><tr><td>consectetur
           adipiscing elit</td><td>fugiat nulla pariatur</td><td>Excepteur sint
-          occaecat cupidatat</td></tr></tbody></table><p><img
-          src="/images/uploads/home/ezgif-com-crop.gif" width="174" height="179"
-          /></p>
+          occaecat cupidatat</td></tr></tbody></table><p><img width="174"
+          height="179" src="/images/uploads/home/ezgif-com-crop.gif" /></p>
       - _component_type: Content Block
         label: Building a Hugo Website
         heading: Building a Hugo Website
