@@ -60,7 +60,15 @@ page_sections:
           culpa</td></tr><tr><td>dolore eu fugiat nulla pariatur</td><td>non
           proident</td><td>Ut enim ad minim veniam</td></tr><tr><td>consectetur
           adipiscing elit</td><td>fugiat nulla pariatur</td><td>Excepteur sint
-          occaecat cupidatat</td></tr></tbody></table><p>&nbsp;</p>
+          occaecat cupidatat</td></tr></tbody></table><pre
+          data-language="liquid"><code class="language-liquid">{% for cat in
+          cats %}
+              &lt;h1&gt;Cat&lt;/h1&gt;
+          {% endfor %}
+
+          </code>
+
+          </pre><p>&nbsp;</p><p>&nbsp;</p>
       - _component_type: Content Block
         label: Building a Hugo Website
         heading: Building a Hugo Website
