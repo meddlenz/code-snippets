@@ -30,17 +30,17 @@ page_sections:
         label: Building a Hugo Website
         heading: Building a Hugo Website
         content_html: >-
-          <h4>Moose</h4><p>Lorem <a target="_blank" rel="noopener" href="/page-2/">ipsum dolor
-          </a>sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam,<em> quis nostrud </em>exercitation ullamco laboris nisi ut
-          aliquip ex ea <strong>commodo consequat</strong>. Duis aute irure
-          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-          in culpa qui officia deserunt mollit anim id est
+          <h4>Moose</h4><p>Lorem <a target="_blank" rel="noopener"
+          href="/page-2/">ipsum dolor </a>sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam,<em> quis nostrud </em>exercitation ullamco
+          laboris nisi ut aliquip ex ea <strong>commodo consequat</strong>. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.</p>
   - label:
-    section_heading: Introduction
+    section_heading: Secondary
     components:
       - _component_type: Content Block
         label: Building a Hugo Website
@@ -78,3 +78,4 @@ _hide_content: true
 _enabled_editors:
   - visual
 ---
+
