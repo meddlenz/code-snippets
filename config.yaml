@@ -16,7 +16,7 @@ params:
           - data
   _options:
     content: &content_defaults
-      uploads_dir: "/images/uploads/:title"
+      uploads_dir: "/static/images/uploads/:title"
       width: 1920
       height: 1200
       format: p feature-heading h1 h2 h3 h4 h5 h6 div blue green yellow orange red pink purple black grey white
