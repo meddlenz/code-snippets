@@ -56,15 +56,14 @@ params:
           label:
           section_heading:
           components:
-
-  components:
-    style: modal
-    values:
-      - label: Content Block
-        icon: event_available
-        image:
-        value:
-          _component_type: Content Block
-          label: Content Block
-          heading: Content Block
-          content_html:
+    components:
+      style: modal
+      values:
+        - label: Content Block
+          icon: event_available
+          image:
+          value:
+            _component_type: Content Block
+            label: Content Block
+            heading: Content Block
+            content_html:
