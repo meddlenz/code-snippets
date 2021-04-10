@@ -1,10 +1,10 @@
 ---
-draft: true
+draft: false
 title: Post 1
 header:
   heading:
   description:
-date: 2021-04-10T12:00:00+12:00
+date: 2021-04-10T00:00:00Z
 category:
 author:
 page_sections:
