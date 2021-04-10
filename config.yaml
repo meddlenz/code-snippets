@@ -48,16 +48,14 @@ params:
       embed: true
     content_html:
       *content_defaults
-
-
-_array_structures:
-  page_sections:
-    - label: Page Section
-      icon: burst_mode
-      value:
-        label:
-        section_heading:
-        components:
+  _array_structures:
+    page_sections:
+      - label: Page Section
+        icon: burst_mode
+        value:
+          label:
+          section_heading:
+          components:
 
   components:
     style: modal
