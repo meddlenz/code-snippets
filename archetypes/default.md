@@ -1,5 +1,4 @@
 ---
-title:
 header:
   heading:
   description:
@@ -9,3 +8,4 @@ _hide_content: true
 _enabled_editors:
   - visual
 ---
+
