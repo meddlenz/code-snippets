@@ -21,21 +21,16 @@ page_sections:
           aliquip ex ea <strong>commodo consequat</strong>. Duis aute irure
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
           nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-          in culpa qui officia deserunt mollit anim id est laborum.<img
-          width="128" height="128" src="/home/george.gif" /><img
-          src="/home/image-1-copy.png" width="199" height="199" /><img
-          width="620" height="621" src="/home/hank.png" /></p><p><img
-          width="313" height="313" src="/uploads/home/arnold-junior.gif"
-          /></p><p><img width="215" height="215"
-          src="/images/uploads/home/gallery-1461240265-arnold-schwarzenegger-2.jpg"
-          /></p><h4>Centered</h4><p>Lorem <a target="_blank" rel="noopener"
-          href="/page-2/">ipsum dolor </a>sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam,<em> quis nostrud </em>exercitation ullamco
-          laboris nisi ut aliquip ex ea <strong>commodo consequat</strong>. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
+          in culpa qui officia deserunt mollit anim id est
+          laborum.</p><h4>Centered</h4><p>Lorem <a target="_blank"
+          rel="noopener" href="/page-2/">ipsum dolor </a>sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam,<em> quis nostrud
+          </em>exercitation ullamco laboris nisi ut aliquip ex ea
+          <strong>commodo consequat</strong>. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est
           laborum.</p><h4>Right</h4><p>Lorem <a target="_blank" rel="noopener"
           href="/page-2/">ipsum dolor </a>sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -65,8 +60,7 @@ page_sections:
           culpa</td></tr><tr><td>dolore eu fugiat nulla pariatur</td><td>non
           proident</td><td>Ut enim ad minim veniam</td></tr><tr><td>consectetur
           adipiscing elit</td><td>fugiat nulla pariatur</td><td>Excepteur sint
-          occaecat cupidatat</td></tr></tbody></table><p><img width="174"
-          height="179" src="/images/uploads/home/ezgif-com-crop.gif" /></p>
+          occaecat cupidatat</td></tr></tbody></table><p>&nbsp;</p>
       - _component_type: Content Block
         label: Building a Hugo Website
         heading: Building a Hugo Website
