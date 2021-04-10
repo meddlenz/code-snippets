@@ -14,6 +14,36 @@ params:
       - heading: Website Settings
         collections:
           - data
+  _options:
+    content: &content_defaults
+          uploads_dir: "/images/uploads/:title"
+          width: 1920
+          height: 1200
+          format: p feature-heading h1 h2 h3 h4 h5 h6 div blue green yellow orange red pink purple black grey white
+          # styles: /assets/css/custom-styles.css
+          undo: true
+          redo: true
+          left: align-to-left
+          center: align-to-center
+          right: align-to-right
+          justify: justify
+          bold: true
+          italic: true
+          underline: true
+          strike: true
+          subscript: false
+          superscript: false
+          blockquote: true
+          table: true
+          copyformatting: true
+          removeformat: true
+          numberedlist: true
+          bulletedlist: true
+          outdent: false
+          indent: false
+          image: true
+          link: true
+          embed: true
 
 
 _array_structures:
