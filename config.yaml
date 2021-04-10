@@ -36,6 +36,7 @@ params:
       superscript: false
       blockquote: true
       table: true
+      code: true
       copyformatting: true
       removeformat: true
       numberedlist: true
