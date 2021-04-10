@@ -3,10 +3,10 @@
 			component
 		   	cms-editor-link" 
 	 data-cms-editor-link-style="modal" 
-	 data-cms-editor-link="cloudcannon:#page_sections[{{ $section_count }}].components[{{ $component_count }}]">
-	<h1 class="component-heading">{{ .heading }}</h1>
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	<h1 class="component-heading">{{ .Component.heading }}</h1>
 
 	<div class="{{$c}}__content">
-		{{ .content_html | safeHTML }}
+		{{ .Component.content_html | safeHTML }}
 	</div>
 </div>
