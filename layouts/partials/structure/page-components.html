@@ -3,7 +3,10 @@
     {{ range $section_count, $section := .Params.page_sections }}
         <div class="page-section">
             {{ if isset $section "section_heading" }}
-                <h1 class="section-heading">{{ $section.section_heading }}</h1>
+                <h1 class="section-heading
+                           cms-editor-link" 
+                    data-cms-editor-link-style="modal" 
+                    data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}]">{{ $section.section_heading }}</h1>
             {{ end }}
             <div class="components">
                 {{ if isset $section "components" }}
