@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Post 1
 header:
   heading: Post 1
