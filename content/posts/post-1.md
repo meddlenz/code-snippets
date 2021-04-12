@@ -2,8 +2,8 @@
 draft: false
 title: Post 1
 header:
-  heading:
-  description:
+  heading: heading
+  description: description
 date: 2021-04-10T00:00:00Z
 category:
 author:

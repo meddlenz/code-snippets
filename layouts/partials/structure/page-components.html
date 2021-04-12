@@ -2,7 +2,7 @@
 {{ if isset .Params "page_sections" }}
     {{ range $section_count, $section := .Params.page_sections }}
         <div class="page-section">
-            {{ if isset $section "section_heading" }}
+            {{ if $section.section_heading }}
                 <h1 class="section-heading
                            cms-editor-link" 
                     data-cms-editor-link-style="modal" 
