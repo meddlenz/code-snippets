@@ -2,7 +2,7 @@
 draft: false
 title: Post
 header:
-  heading: heading
+  heading: Post Heading
   description: description
 date: 2021-04-10T00:00:00Z
 category:

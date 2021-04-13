@@ -12,6 +12,7 @@ params:
         collections:
           - web_pages
           - posts
+          - people
       - heading: Website Settings
         collections:
           - data
