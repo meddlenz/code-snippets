@@ -1,10 +1,10 @@
 ---
 draft: true
-title: "{{ replace .Name '-' ' ' | title }}"
+title:
 header:
   heading:
   description:
-date: {{ .Date }}
+date:
 category:
 author:
 page_sections:
