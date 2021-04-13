@@ -3,6 +3,6 @@ name:
 role:
 location:
 email:
-website:
+website_url:
 profile_image:
 ---
