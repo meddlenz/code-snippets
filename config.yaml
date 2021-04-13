@@ -8,7 +8,7 @@ params:
   uploads_dir: "/static/:title"
   _explore:
     groups:
-      - heading: Web Pages
+      - heading: Collections
         collections:
           - pages
           - posts
