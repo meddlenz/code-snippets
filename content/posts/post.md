@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Post 1
+title: Post
 header:
   heading: heading
   description: description

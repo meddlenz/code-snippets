@@ -1,8 +1,8 @@
 baseURL: "http://example.org/"
 
 permalinks:
-  posts: /:year/:month/:title/
-  web_pages: /:title/
+  posts: /:title/
+  pages: /:title/
 
 params:
   uploads_dir: "/static/:title"
@@ -16,6 +16,8 @@ params:
         collections:
           - data
   _options:
+    url:
+      hidden: true
     content: &content_defaults
       uploads_dir: "/static/:title"
       width: 1920

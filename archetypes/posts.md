@@ -1,13 +1,14 @@
 ---
 draft: true
-title:
+title: "{{ replace .Name '-' ' ' | title }}"
 header:
   heading:
   description:
-date:
+date: {{ .Date }}
 category:
 author:
 page_sections:
+type: posts
 _hide_content: true
 _enabled_editors:
   - visual

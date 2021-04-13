@@ -1,20 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
 	{{ partial "structure/head" . }}
 
-<body>
-	<div class="body-wrapper">
-		{{ $relative_url := relURL .Permalink }}
-		{{ if eq $relative_url "/" }}
+	<body>
+		<div class="body-wrapper">
 
-			{{ with site.GetPage "web_pages/home.md" }}
-				{{ partial "structure/body-structure" . }}
-			{{ end }}
-		{{ else }}
-			{{ partial "structure/body-structure" . }}
-		{{ end }}
-		{{ partial "structure/scripts" . }}
-	</div>
-</body>
+				{{ partial "structure/header" . }}
+				{{ partial "structure/navigation" . }}
+				<div class="content-wrapper">
+					{{ block "main" . }}{{ .Content }}{{ end }}
+				{{ partial "structure/page-components" . }}
+				</div>
+				{{ partial "structure/footer" . }}
+
+
+
+
+		</div>
+
+	</body>
 </html>
-

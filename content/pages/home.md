@@ -117,6 +117,7 @@ page_sections:
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum</li><li>Exercitation ullamco laboris nisi ut aliquip ex
           ea</li></ul>
+url: /
 _hide_content: true
 _enabled_editors:
   - visual
