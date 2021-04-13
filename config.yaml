@@ -10,7 +10,7 @@ params:
     groups:
       - heading: Web Pages
         collections:
-          - web_pages
+          - pages
           - posts
       - heading: Website Settings
         collections:
