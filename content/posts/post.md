@@ -8,6 +8,7 @@ date: 2021-04-10T00:00:00Z
 category:
 authors:
   people:
+    - jordan-trbuhovic
 page_sections:
   - label:
     section_heading:
@@ -27,3 +28,4 @@ _hide_content: true
 _enabled_editors:
   - visual
 ---
+
