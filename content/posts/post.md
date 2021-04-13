@@ -6,7 +6,8 @@ header:
   description: description
 date: 2021-04-10T00:00:00Z
 category:
-author:
+authors:
+  people:
 page_sections:
   - label:
     section_heading:
