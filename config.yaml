@@ -4,6 +4,11 @@ permalinks:
   posts: /:title/
   pages: /:title/
 
+taxonomies:
+  person: 'people'
+  web_page: 'web_pages'
+  post: 'posts'
+
 params:
   uploads_dir: "/static/:title"
   _explore:
@@ -13,7 +18,7 @@ params:
           - web_pages
           - posts
           - people
-      - heading: Website Settings
+      - heading: Website Management
         collections:
           - data
   _options:

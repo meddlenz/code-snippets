@@ -1,6 +1,6 @@
 ---
-title: Jordan!
-name: Jordan Trbuhovic
+title: Boris
+name: Boris
 role: Web Developer
 location: New Zealand
 email: jordan@meddle.co.nz

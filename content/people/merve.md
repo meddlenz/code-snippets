@@ -1,6 +1,6 @@
 ---
-title: Jordan!
-name: Jordan Trbuhovic
+title: Merve
+name: Merve
 role: Web Developer
 location: New Zealand
 email: jordan@meddle.co.nz
