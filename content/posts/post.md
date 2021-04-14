@@ -10,6 +10,7 @@ authors:
   show_authors: true
   people:
     - jordan-trbuhovic
+    - merve
 page_sections:
   - label:
     section_heading:
