@@ -1,5 +1,4 @@
 ---
-title: Jordan!
 name: Jordan Trbuhovic
 role: Web Developer
 location: New Zealand

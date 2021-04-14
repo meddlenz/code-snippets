@@ -1,5 +1,4 @@
 ---
-title: Merve
 name: Merve
 role: Web Developer
 location: New Zealand

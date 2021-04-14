@@ -1,5 +1,4 @@
 ---
-title: Boris
 name: Boris
 role: Web Developer
 location: New Zealand

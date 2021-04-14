@@ -4,22 +4,19 @@
 		<div class="{{$l}}__details">
 			<p class="{{$l}}__date">Date</p>
 			<div class="{{$l}}__authors">
-				{{ range .Params.authors.people }}
-					{{ .}}
-				{{ end }}
-				{{ range $index, $collections := .Site.Sections }}
-					{{ if eq $collections.Title "People" }}
-						{{ $collection := . }}
-						<ul>
-							{{ range $collection.Pages }}
-					  			{{ $item := . }}
-					  			{{ if $item.Params.name }}
-						  			<li>{{ $item.Params.name }}</li>
-				  				{{ end }}
-							{{ end }}
-						</ul>
+				{{ $collection := site.GetPage "/people/" }}
+				<div class="{{$l}}__author">
+					{{ $collection := site.GetPage "/people/" }}
+					{{ $authors := .Params.authors.people }}
+					{{ range $collection.Pages }}
+						{{ $name_slug := .Params.name | urlize}}
+
+			  			{{ if in $authors $name_slug }}
+			  				<img src="{{ .Params.profile_image }}" alt="{{ .Params.name }} profile image" />
+				  			<p>{{ .Params.name }}</p>
+		  				{{ end }}
 					{{ end }}
-				{{ end }}
+				</div>
 			</div>
 		</div>
 	</div>

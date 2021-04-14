@@ -1,3 +1,28 @@
 .l-post-layout {
 	border: 10px solid red;
+
+	&__details {
+
+	}
+
+	&__date {
+
+	}
+
+	&__authors {
+
+	}
+
+	&__author {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		img {
+
+		}
+
+		p {
+
+		}
+	}
 }
