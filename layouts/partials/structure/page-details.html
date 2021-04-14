@@ -1,0 +1,23 @@
+{{ $c := "c-page-details" }}
+<div class="{{$c}}">
+	{{ if .Params.date }}
+		<p class="{{$c}}__date">{{ .Params.date.Format "2 Jan 2006" }}</p>
+	{{ end }}
+	{{ if .Params.authors.people}}
+		<div class="{{$c}}__authors">
+			{{ $collection := site.GetPage "/people/" }}
+			{{ $collection := site.GetPage "/people/" }}
+			{{ $authors := .Params.authors.people }}
+			{{ range $collection.Pages }}
+				{{ $name_slug := .Params.name | urlize}}
+
+	  			{{ if in $authors $name_slug }}
+		  			<a class="{{$c}}__author" href="{{ .Page.Permalink }}">
+		  				<img src="{{ .Params.profile_image }}" alt="{{ .Params.name }} profile image" />
+			  			<span>{{ .Params.name }}</span>
+					</a>
+					{{ end }}
+			{{ end }}
+		</div>
+	{{ end }}
+</div>

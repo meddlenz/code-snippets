@@ -10,4 +10,5 @@
 	{{ if .Params.header.description }}
 		<p class="{{$c}}__description">{{ .Params.header.description }}</p>
 	{{ end }}
+	{{ partial "structure/page-details" . }}
 </div>
