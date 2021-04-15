@@ -4,11 +4,24 @@
         	cms-editor-link" 
      data-cms-editor-link-style="modal" 
      data-cms-editor-link="cloudcannon:#header">
+
+	{{ $main := "null" }}
+    {{ if .Params.header.heading }}
+    	{{ $main := .Params.header.heading }}
+    {{ else if .Params.name }}
+    	{{ $main := .Params.name }}
+    {{ end }}
+
+
 	{{ if .Params.header.heading }}
 		<h1 class="{{$c}}__main-heading">{{ .Params.header.heading }}</h1>
+	{{ else if .Params.name }}
+		<h1 class="{{$c}}__main-heading">{{ .Params.name }}</h1>
 	{{ end }}
 	{{ if .Params.header.description }}
 		<p class="{{$c}}__description">{{ .Params.header.description }}</p>
+	{{ else if .Params.role }}
+		<p class="{{$c}}__description">{{ .Params.role }}</p>
 	{{ end }}
 	{{ partial "structure/page-details" . }}
 </div>
