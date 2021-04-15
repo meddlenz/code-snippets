@@ -2,7 +2,7 @@ baseURL: "http://example.org/"
 
 permalinks:
   posts: /:title/
-  pages: /:title/
+  web_pages: /:title/
 
 taxonomies:
   person: 'people'
