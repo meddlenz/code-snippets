@@ -1,6 +1,6 @@
 navigation_items:
   - title: Home
-    url: "/"
+    page_url: "/"
     use_submenu_for_collection:
     submenu:
       - title:
