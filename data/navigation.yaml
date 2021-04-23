@@ -1,7 +1,7 @@
 navigation_items:
   - title: Home
-    page_link: "/"
+    page_link: /
     use_submenu_for_collection:
     submenu:
-      - title:
-        page_link:
+      - title: Blog
+        page_link: /page-1/
