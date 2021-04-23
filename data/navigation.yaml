@@ -1,0 +1,7 @@
+navigation_items:
+  - title: Home
+    url: /
+    use_submenu_for_collection:
+    submenu:
+      - title:
+        url:

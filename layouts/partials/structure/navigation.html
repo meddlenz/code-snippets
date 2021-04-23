@@ -2,6 +2,39 @@
 
 <div class="{{$c}}">
 	<ul class="{{$c}}__nav-items">
+		{{ $items := .Site.Data.navigation.navigation_items }}
+
+		{{ range $items }}
+		    <li class="{{$c}}__item">
+		    	{{ if .use_submenu_for_collection }}
+		    		<a class="{{$c}}__link"
+			           href="{{ .url }}">{{ .title }}</a>
+			        <div class="{{$c}}__submenu">
+			        	<ul class="{{$c}}__submenu-wrapper">
+			        		{{ range .submenu }}
+			        			<li class="{{$c}}__item">
+			        				<a class="{{$c}}__link"
+							           href="{{ .url }}">{{ .title }}</a>
+			        			</li>
+			        		{{ end }}
+			        	</ul>
+			        </div>
+		    	{{ else }}
+			        <a class="{{$c}}__link"
+			           href="{{ .url | default "/" }}">{{ .title }}</a>
+			    {{ end }}
+		    </li>
+	    {{ end }}
+	</ul>
+</div>
+
+
+
+
+{{/* 
+	Original Setup
+
+	<ul class="{{$c}}__nav-items">
 		{{ range .Site.RegularPages }}
 			{{ $relative_url := relURL .Permalink }}
 			{{ if eq $relative_url "/home/" }}
@@ -15,6 +48,4 @@
 			{{ end }}
 	    {{ end }}
 	</ul>
-</div>
-
-
+*/}}

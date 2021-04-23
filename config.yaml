@@ -75,3 +75,7 @@ params:
             label: Content Block
             heading: Content Block
             content_html:
+  _comments:
+    use_submenu_for_collection: >-
+      "Creates a submenu populated from items within the chosen collection. Disables the main URL above one has been set, and any items in the 'Submenu' option below will be ignored."
+    submenu: Create a custom submenu. Disables the main URL above if one has been set.
