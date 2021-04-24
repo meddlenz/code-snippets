@@ -10,6 +10,13 @@ authors:
   show_authors: true
   people:
 page_sections:
+  - label:
+    section_heading: Introduction
+    components:
+      - _component_type: Content Block
+        label: Content Block
+        heading: Content Block
+        content_html: <p>Hi</p>
 type: posts
 _hide_content: true
 _enabled_editors:
