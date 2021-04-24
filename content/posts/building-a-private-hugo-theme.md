@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Building a Private Hugo Theme
 header:
   heading:
