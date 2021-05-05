@@ -4,10 +4,10 @@ permalinks:
   posts: /:title/
   web_pages: /:title/
 
-taxonomies:
-  person: 'people'
-  web_page: 'web_pages'
-  post: 'posts'
+# taxonomies:
+#   person: 'people'
+#   web_page: 'web_pages'
+#   post: 'posts'
 
 params:
   uploads_dir: "/static/:title"
@@ -17,6 +17,7 @@ params:
         collections:
           - web_pages
           - posts
+          - post_categories
           - people
       - heading: Website Management
         collections:
