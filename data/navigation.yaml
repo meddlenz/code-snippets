@@ -11,5 +11,5 @@ navigation_items:
     submenu:
   - title: People
     page_link:
-    use_submenu_for_collection: people
+    use_submenu_for_content: people
     submenu:
