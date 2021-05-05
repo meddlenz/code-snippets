@@ -7,6 +7,6 @@ website_url: 'https://www.meddle.co.nz'
 profile_image: /uploads/profile.jpg
 ---
 
-Hi there, I'm Jordan. I live in New Zealand and work for CloudCannon as a Services engineer, and run a small web development agency called Meddle The intention of this website is to provide a place I can write guides, notes, and general posts relating to dev work and my interests.
+Hi there! I'm a front-end developer and run a small web development agency called Meddle. I also work for CloudCannon as a services engineer. I made this website to share tips/tricks I use when building websites, so hopefully you've found something useful!
 
 Thanks for stopping by!

@@ -7,21 +7,42 @@
 		{{ range $items }}
 		    <li class="{{$c}}__item">
 		    	{{ if .use_submenu_for_collection }}
-		    		<a class="{{$c}}__link"
-			           href="{{ .url }}">{{ .title }}</a>
+		    		<a class="{{$c}}__link {{$c}}__link--submenu">
+		    			<span class="{{$c}}__indicator">
+				    		{{ partial "svg/dropdown-indicator.svg" }}
+				    	</span>
+				    	{{ .title }}
+				    </a>
 			        <div class="{{$c}}__submenu">
 			        	<ul class="{{$c}}__submenu-wrapper">
 			        		{{ range .submenu }}
 			        			<li class="{{$c}}__item">
 			        				<a class="{{$c}}__link"
-							           href="{{ .url }}">{{ .title }}</a>
+							           href="{{ .page_link }}">{{ .title }}</a>
 			        			</li>
 			        		{{ end }}
 			        	</ul>
 			        </div>
-		    	{{ else }}
+		    	{{ else if index (.submenu) 0 "title" }}
+		    		<a class="{{$c}}__link {{$c}}__link--submenu">
+		    			<span class="{{$c}}__indicator">
+				    		{{ partial "svg/dropdown-indicator.svg" }}
+				    	</span>
+				    	{{ .title }}
+				    </a>
+			        <div class="{{$c}}__submenu">
+			        	<ul class="{{$c}}__submenu-wrapper">
+			        		{{ range .submenu }}
+			        			<li class="{{$c}}__item">
+			        				<a class="{{$c}}__link"
+							           href="{{ .page_link }}">{{ .title }}</a>
+			        			</li>
+			        		{{ end }}
+			        	</ul>
+			        </div>
+			    {{ else }}
 			        <a class="{{$c}}__link"
-			           href="{{ .url | default "/" }}">{{ .title }}</a>
+			           href="{{ .page_link | default "/" }}">{{ .title }}</a>
 			    {{ end }}
 		    </li>
 	    {{ end }}
@@ -49,3 +70,17 @@
 	    {{ end }}
 	</ul>
 */}}
+
+<script>
+	var navigation = document.querySelector('.c-navigation')
+	var links = document.getElementsByClassName("c-navigation__link--submenu");
+	function checkElement() {
+		var element = event.target;
+		if (element.classList.contains('c-navigation__link--submenu')) {
+			element.classList.toggle('c-navigation__link--submenu-open');
+			element.nextElementSibling.classList.toggle('c-navigation__submenu--open');
+		}
+	}
+
+	navigation.addEventListener('click', checkElement);
+</script>

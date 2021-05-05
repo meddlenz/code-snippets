@@ -1,4 +1,4 @@
-.c-navigation {
+.c-navigation { $c: &;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -20,37 +20,117 @@
 		height: 100%;
 		border-right: 1px solid $primary_2;
 		list-style: none;
+	}
 
-		li {
-			a {
-				position: relative;
-				display: block;
-				// border: 1px solid red;
-				padding: 15px;
-				@include scale-custom(padding-left, 25px, 50px, $min-breakpoint, $max-breakpoint);
-				@include scale-custom(font-size, 16px, 22px, $min-breakpoint, $max-breakpoint);
-				transition: color 0.2s ease-in-out;
+	&__item {
 
+	}
+
+	&__link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		// border: 1px solid red;
+		padding: 15px;
+		@include scale-custom(padding-left, 25px, 50px, $min-breakpoint, $max-breakpoint);
+		@include scale-custom(font-size, 16px, 22px, $min-breakpoint, $max-breakpoint);
+		cursor: pointer;
+		transition: color 0.2s ease-in-out;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			@include scale-custom(left, 12.5px, 25px, $min-breakpoint, $max-breakpoint);
+			bottom: 0;
+			height: 100%;
+			border-left: 4px solid transparent;
+			transition: border-left 0.2s ease-in-out;
+		}
+
+		&:hover {
+			color: $primary_3;
+			transition: color 0.2s ease-in-out;
+
+			&:after {
+				border-left: 4px solid $primary_2;
+				transition: border-left 0.2s ease-in-out;
+			}
+		}
+
+		&--submenu {
+			user-select: none;
+
+			
+
+			&:hover {
 				&:after {
-					content: '';
-					display: block;
-					position: absolute;
-					@include scale-custom(left, 12.5px, 25px, $min-breakpoint, $max-breakpoint);
-					bottom: 0;
-					height: 100%;
 					border-left: 4px solid transparent;
-					transition: border-left 0.2s ease-in-out;
 				}
 
-				&:hover {
-					color: $primary_3;
-					transition: color 0.2s ease-in-out;
-
-					&:after {
-						border-left: 4px solid $primary_2;
-						transition: border-left 0.2s ease-in-out;
-					}
+				svg {
+					color: $primary_2;
 				}
+			}
+		}
+
+		&--submenu-open {
+			svg {
+				transform: rotate(90deg);
+				transition: transform 0.2s ease-in-out;
+			}
+		}
+	}
+
+	&__indicator {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		@include scale-custom(left, 8px, 15px, $mid-breakpoint, $max-breakpoint);
+		top: 50%;
+		transform: translateY(-50%);
+		padding-bottom: 4px;
+
+		svg {
+			@include scale-custom(width, 24px, 30px, $mid-breakpoint, $max-breakpoint);
+			@include scale-custom(height, 24px, 30px, $mid-breakpoint, $max-breakpoint);
+			transition: transform 0.2s ease-in-out;
+		}
+	}
+
+	&__submenu {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		max-height: 0;
+		transition: opacity 0.2s ease-in-out, max-height 0.3s ease-in-out;
+
+		&--open {
+			max-height: 900px;
+			opacity: 1;
+			transition: opacity 0.2s ease-in-out, max-height 0.3s ease-in-out;
+		}
+	}
+
+	&__submenu-wrapper {
+		margin: 0;
+		@include scale-custom(margin-left, 25px, 50px, $min-breakpoint, $max-breakpoint);
+		padding: 0;
+		list-style: none;
+		// border-left: 1px solid $primary_3;
+
+		#{$c}__item {
+			
+		}
+
+		#{$c}__link {
+			padding: 10px;
+			@include scale-custom(padding-left, 15px, 25px, $min-breakpoint, $max-breakpoint);
+			@include scale-custom(font-size, 14px, 16px, $min-breakpoint, $max-breakpoint);
+
+			&:after {
+				left: -2px;
 			}
 		}
 	}
