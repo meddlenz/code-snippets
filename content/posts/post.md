@@ -5,7 +5,7 @@ header:
   heading: Post Heading
   description: description
 date: 2021-04-10T00:00:00Z
-category:
+post_category:
 authors:
   show_authors: true
   people:
