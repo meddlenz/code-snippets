@@ -15,15 +15,23 @@
 				    </a>
 			        <div class="{{$c}}__submenu">
 			        	<ul class="{{$c}}__submenu-wrapper">
-			        		{{ range .submenu }}
+			        		{{ $page_string := print "/" .use_submenu_for_collection "/" }}
+			        		{{ $collection := site.GetPage $page_string }}
+			        		{{ range $collection.Pages }}
 			        			<li class="{{$c}}__item">
 			        				<a class="{{$c}}__link"
-							           href="{{ .page_link }}">{{ .title }}</a>
+							           href="{{ .Permalink }}">
+							            {{ if .Params.title }}
+								       		{{ .Params.title }}
+							            {{ else if .Params.name }}
+								       		{{ .Params.name }}
+							       		{{ end }}
+							       	</a>
 			        			</li>
 			        		{{ end }}
 			        	</ul>
 			        </div>
-		    	{{ else if index (.submenu) 0 "title" }}
+		    	{{ else if .submenu }}
 		    		<a class="{{$c}}__link {{$c}}__link--submenu">
 		    			<span class="{{$c}}__indicator">
 				    		{{ partial "svg/dropdown-indicator.svg" }}
