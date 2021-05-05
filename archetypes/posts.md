@@ -5,7 +5,7 @@ header:
   heading:
   description:
 date:
-category:
+post_category:
 authors:
   show_authors: true
   people:

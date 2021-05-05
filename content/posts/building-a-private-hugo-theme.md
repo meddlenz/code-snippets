@@ -5,7 +5,7 @@ header:
   heading:
   description:
 date: 2021-04-24T21:24:00Z
-category:
+post_category:
 authors:
   show_authors: true
   people:
