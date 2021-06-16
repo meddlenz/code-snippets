@@ -12,6 +12,7 @@
                 {{ if isset $section "components" }}
                     {{ range $component_count, $component := $section.components }}
                         {{ partial "components/content-block.html" (dict "Component" . "section_count" $section_count "component_count" $component_count) }}
+                        {{ partial "components/image-gallery.html" (dict "Component" . "section_count" $section_count "component_count" $component_count) }}
                     {{ end }}
                 {{ end }}
             </div>

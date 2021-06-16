@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-@import "variables";
 @import "cloudcannon";
 @import "mixins/breakpoint-mixins";
 @import "mixins/scale-custom";
@@ -10,3 +9,4 @@
 @import "structure/navigation";
 @import "structure/footer";
 @import "layouts/posts";
+@import "components/_index";

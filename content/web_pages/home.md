@@ -117,6 +117,72 @@ page_sections:
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum</li><li>Exercitation ullamco laboris nisi ut aliquip ex
           ea</li></ul>
+      - _component_type: Image Gallery
+        label: Image Gallery
+        heading: Image Gallery
+        images:
+          - image: https://picsum.photos/seed/picsum/200/300
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            url: https://google.com
+            orientation: 'Landscape'
+          - image: https://picsum.photos/200/300?grayscale
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            url: https://google.com
+            orientation: 'Landscape'
+          - image: https://picsum.photos/id/237/1200/650
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            url: https://google.com
+            orientation: 'Landscape'
+          - image: https://picsum.photos/id/236/200/300
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            url: https://google.com
+            orientation: 'Landscape'
+          - image: https://picsum.photos/id/235/200/300
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            url: https://google.com
+            orientation: 'Landscape'
+          - image: https://picsum.photos/id/234/200/700
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            url: https://google.com
+            orientation: 'Landscape'
+          - image: https://picsum.photos/id/233/200/300
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            url: https://google.com
+            orientation: 'Landscape'
+          - image: https://picsum.photos/id/900/300
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+          - image: https://picsum.photos/1024/768.jpg
+            description_text: >-
+              Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            url: https://google.com
+            orientation: 'Landscape'
+        column_number: 3
 url: /
 _hide_content: true
 _enabled_editors:

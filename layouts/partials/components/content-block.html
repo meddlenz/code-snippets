@@ -4,7 +4,9 @@
 		   	cms-editor-link" 
 	 data-cms-editor-link-style="modal" 
 	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
-	<h1 class="component-heading">{{ .Component.heading }}</h1>
+	{{ if .Component.heading }}
+		<h1 class="component-heading">{{ .Component.heading }}</h1>
+	{{ end }}
 
 	<div class="{{$c}}__content">
 		{{ .Component.content_html | safeHTML }}

@@ -13,6 +13,12 @@
 	<meta property="og:site_name" content="{{ .Site.Data.settings.title }}">
 
 	<!-- Custom css -->
-	{{ $custom := resources.Get "sass/root.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
-	<link rel="stylesheet" href="{{ $custom.Permalink }}">
+	{{ $scssVars := resources.Get "sass/variables.scss"}}
+	{{ $scssVars = $scssVars | resources.ExecuteAsTemplate "variables.scss" . }}
+
+	{{ $scssRoot := resources.Get "sass/root.scss" | resources.PostCSS (dict "config" "postcss.config.js") }}
+	{{ $scss := slice $scssVars $scssRoot | resources.Concat "sass/root.scss" }}
+	{{ $css := $scss | toCSS (dict "targetPath" "assets/css/root.css") }}
+
+	<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 </head>

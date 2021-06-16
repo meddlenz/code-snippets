@@ -39,6 +39,8 @@ a {
 
 blockquote {
 	margin: 25px 45px 25px 45px;
+	@include scale-custom(margin-left, 20px, 45px, $mid-breakpoint, $max-breakpoint);
+	@include scale-custom(margin-right, 20px, 45px, $mid-breakpoint, $max-breakpoint);
 	padding: 15px 15px 15px 45px;
 	box-sizing: border-box;
 	border-left: 4px solid rgba(255,255,255,0.2);
@@ -105,12 +107,18 @@ code {
 }
 
 .body-wrapper {
+	display: flex;
+	justify-content: center;
 	margin: 0 auto;
-	max-width: 1440px;
+	max-width: $max-breakpoint;
+}
+
+.body-wrapper-inner {
+
 }
 
 .content-wrapper {
-	@include scale-custom(margin-left, 225px, $nav_width, $mid-breakpoint, $max-breakpoint);
+	// @include scale-custom(margin-left, 225px, $nav_width, $mid-breakpoint, $max-breakpoint);
 	@include scale-custom(padding-left, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
 	@include scale-custom(padding-right, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);
 	@include scale-custom(padding-bottom, $body_min_padding, $body_max_padding, $min-breakpoint, $max-breakpoint);

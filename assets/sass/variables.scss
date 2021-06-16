@@ -10,8 +10,20 @@ $mid-breakpoint: 750px;
 $min-breakpoint: 375px;
 
 // Navigation
-$nav_width: 325px;
+$nav_width: 275px;
 
 // Body
 $body_max_padding: 50px;
 $body_min_padding: 25px;
+
+// Animations
+$timing-short: {{ .Site.Data.settings.theme.transitions.short_duration_number }}s;
+$timing-medium: {{ .Site.Data.settings.theme.transitions.medium_duration_number }}s;
+$timing-long: {{ .Site.Data.settings.theme.transitions.long_duration_number }}s;
+$timing-longer: {{ .Site.Data.settings.theme.transitions.longer_duration_number }}s;
+
+// Transitions
+$trans-short: $timing-short ease-in-out;
+$trans-medium: $timing-medium ease-in-out;
+$trans-long: $timing-long ease-in-out;
+$trans-longer: $timing-longer ease-in-out;

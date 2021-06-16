@@ -1,5 +1,4 @@
 ---
-title: Hugo
 header:
   heading: Hugo
   description:

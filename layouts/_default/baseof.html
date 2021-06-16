@@ -5,17 +5,16 @@
 	<body>
 		<div class="body-wrapper">
 
-				{{ partial "structure/header" . }}
 				{{ partial "structure/navigation" . }}
-				<div class="content-wrapper">
-					{{ block "main" . }}{{ .Content }}{{ end }}
-				{{ partial "structure/page-components" . }}
+				<div class="body-wrapper-inner">
+					{{ partial "structure/header" . }}
+					<div class="content-wrapper">
+						{{ block "main" . }}{{ .Content }}{{ end }}
+					{{ partial "structure/page-components" . }}
+					</div>
+					{{ partial "structure/footer" . }}
 				</div>
-				{{ partial "structure/footer" . }}
-
-
-
-
+			{{ partial "structure/scripts" }}
 		</div>
 
 	</body>

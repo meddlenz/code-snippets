@@ -1,5 +1,4 @@
 ---
-title:
 header:
   heading:
   description:

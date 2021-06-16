@@ -1,2 +1,9 @@
 title: "Code Snippets"
 description: "Site Description"
+
+theme:
+  transitions:
+    short_duration_number: 0.2
+    medium_duration_number: 0.4
+    long_duration_number: 1.0
+    longer_duration_number: 4.0
