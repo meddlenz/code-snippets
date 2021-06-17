@@ -77,7 +77,7 @@ params:
           icon: event_available
           image:
           value:
-            _component_type: Content Block
+            _component_type: content-block
             label: Content Block
             heading: Content Block
             content_html:
@@ -85,24 +85,20 @@ params:
           icon: event_available
           image:
           value:
-            _component_type: Image Gallery
+            _component_type: image-gallery
             label: Image Gallery
             heading: Image Gallery
+            column_number: 3
             images:
               - image:
                 description_text:
                 url:
-                orientation: 'Landscape'
-            column_number: 3
     submenu:
       - label: Submenu
         icon: link
         value:
           title:
           page_link:
-  orientations:
-    - 'Landscape'
-    - 'Portrait'
   _comments:
     use_submenu_for_collection: >-
       "Creates a submenu populated from items within the chosen collection. Disables the main URL above one has been set, and any items in the 'Submenu' option below will be ignored."

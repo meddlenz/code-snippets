@@ -1,6 +1,7 @@
 ---
 draft: false
-title: Post
+featured: false
+title: Post 2
 header:
   heading: Post Heading
   description: description

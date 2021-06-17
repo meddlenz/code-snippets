@@ -9,11 +9,37 @@
                     data-cms-editor-link="cloudcannon:#page_sections[{{ $section_count }}]">{{ $section.section_heading }}</h1>
             {{ end }}
             <div class="components">
-                {{ if isset $section "components" }}
-                    {{ range $component_count, $component := $section.components }}
-                        {{ partial "components/content-block.html" (dict "Component" . "section_count" $section_count "component_count" $component_count) }}
-                        {{ partial "components/image-gallery.html" (dict "Component" . "section_count" $section_count "component_count" $component_count) }}
+                {{ range $component_count, $component := $section.components }}
+
+                    {{ if eq "content-block" $component._component_type }}
+                        {{ partial "components/content-block.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+                    {{ else if eq "image-gallery" $component._component_type}}
+                        {{ partial "components/image-gallery.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+                    {{ else if eq "all-posts" $component._component_type}}
+                        {{ partial "components/cards.html" (dict "Component" . 
+                                                                 "section_count" $section_count 
+                                                                 "component_count" $component_count
+                                                                 "CollectionName" "posts") }}
+                    {{ else if eq "featured-posts" $component._component_type}}
+                        {{ partial "components/cards.html" (dict "Component" . 
+                                                                 "section_count" $section_count 
+                                                                 "component_count" $component_count
+                                                                 "CollectionName" "posts"
+                                                                 "Featured" true) }}
+                    {{ else if eq "recent-posts" $component._component_type}}
+                        {{ partial "components/cards.html" (dict "Component" . 
+                                                                 "section_count" $section_count 
+                                                                 "component_count" $component_count
+                                                                 "CollectionName" "posts"
+                                                                 "Recent" true) }}
+                    {{ else }}
+                        <h3 style="text-align: center;color: red;">Component Error: Unset</h3>
                     {{ end }}
+
                 {{ end }}
             </div>
         </div>

@@ -23,15 +23,20 @@
 	</div>
 
 	<div class="{{$c}}__lightbox">
-		<div class="{{$c}}__image-element">
-			<span class="{{$c}}__control {{$c}}__control--close"></span>
-			
-			<div class="{{$c}}__controls">
-				<span class="{{$c}}__control {{$c}}__control--previous"
-					  data-increment="-1"></span>
-				<span class="{{$c}}__control {{$c}}__control--next"
-					  data-increment="1"></span>
-			</div>
+		<div class="{{$c}}__slides">
+			{{ range $index, $images := .Component.images }}
+				<img class="{{$c}}__slide" 
+						 src="{{ .image }}" 
+						 alt="{{ .description_text }}"
+						 data-index="{{$index}}" />
+			{{ end }}
+		</div>
+		<span class="{{$c}}__control {{$c}}__control--close"></span>
+		<div class="{{$c}}__controls">
+			<span class="{{$c}}__control {{$c}}__control--previous"
+				  data-increment="-1"></span>
+			<span class="{{$c}}__control {{$c}}__control--next"
+				  data-increment="1"></span>
 		</div>
 	</div>
 </div>

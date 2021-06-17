@@ -1,0 +1,38 @@
+{{ $c := "c-card-generic" }}
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+
+	{{ if .CardImage }}
+		<a class="{{$c}}__image-wrapper"
+			href="{{ .CardUrl }}">
+			<img class="{{$c}}__image" src="{{ .CardImage }}" alt="{{ .CardTitle }}">
+		</a>
+	{{ end }}
+
+	<div class="{{$c}}__title-block">
+		<span class="{{$c}}__title-block-main">
+			<h3 class="{{$c}}__title">
+				<a href="{{ .CardUrl }}">{{ .CardTitle }}</a>
+			</h3>
+			{{ if .CardBadge }}
+				<span class="{{$c}}__badge"
+					  style="background-color: {{ .CardBadgeColour }};
+					  		 color: {{ .CardBadgeLabelColour }}">
+					  		 <span>{{ .CardBadgeLabel }}</span>
+				</span>
+			{{ end }}
+		</span>
+	</div>
+	{{ if .CardDetails }}
+		<p class="{{$c}}__details">{{ .CardDetails }}{{ if .CardCategory }} - {{ .CardCategory }}{{ end }}</p>
+	{{ end }}
+
+	{{ if .CardDescription }}
+		<p class="{{$c}}__content">
+			{{ .CardDescription | truncate 275 }}
+		</p>
+	{{ end }}
+</div>

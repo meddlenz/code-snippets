@@ -1,0 +1,87 @@
+{{ $c := "c-cards" }}
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	{{ if .Component.heading }}
+		<h1 class="component-heading">{{ .Component.heading }}</h1>
+	{{ end }}
+
+
+		<div class="{{$c}}__card-grid">
+			{{ $string := .CollectionName }}
+			{{ $collection := site.GetPage .CollectionName }}
+
+			<!-- Posts -->
+
+			{{ if eq "posts" $string }}
+				{{ if .Featured }}
+					{{ range where $collection.Pages "Params.featured" true }}
+						{{ $date := .Params.date.Format "02 January 06" }}
+						{{ partial "components/card-generic.html" (dict "Component" . 
+	                                                            "CardTitle" .Params.title
+	                                                            "CardDetails" $date
+	                                                            "CardUrl" .RelPermalink
+	                                                            "CardDescription" .Params.preview_text
+	                                                            "CardImage" .Params.preview_image
+	                                                            "CardBadge" false
+	                                                            "CardBadgeColour" "#999999"
+	                                                            "CardBadgeLabel" "Hi"
+	                                                            "CardBadgeLabelColour" "#ffffff") }}	
+					{{ end }}
+				{{ else if .Recent }}
+					{{ range first 3 $collection.Pages.ByDate.Reverse }}
+						{{ $date := .Params.date.Format "02 January 06" }}
+						{{ partial "components/card-generic.html" (dict "Component" . 
+	                                                            "CardTitle" .Params.title
+	                                                            "CardDetails" $date
+	                                                            "CardUrl" .RelPermalink
+	                                                            "CardDescription" .Params.preview_text
+	                                                            "CardImage" .Params.preview_image
+	                                                            "CardBadge" false
+	                                                            "CardBadgeColour" "#999999"
+	                                                            "CardBadgeLabel" "Hi"
+	                                                            "CardBadgeLabelColour" "#ffffff") }}
+	                {{ end }}
+				{{ else }}
+					{{ range $collection.Pages }}
+						{{ $date := .Params.date.Format "02 January 06" }}
+						{{ partial "components/card-generic.html" (dict "Component" . 
+	                                                            "CardTitle" .Params.title
+	                                                            "CardDetails" $date
+	                                                            "CardUrl" .RelPermalink
+	                                                            "CardDescription" .Params.preview_text
+	                                                            "CardImage" .Params.preview_image
+	                                                            "CardBadge" false
+	                                                            "CardBadgeColour" "#999999"
+	                                                            "CardBadgeLabel" "Hi"
+	                                                            "CardBadgeLabelColour" "#ffffff") }}
+	                {{ end }}
+				{{ end }}
+			{{ end }}
+
+
+
+
+
+			<!-- People -->
+			
+							
+			{{ if eq "people" $string }}
+				{{ range $collection.Pages }}
+					{{ partial "components/card-generic.html" (dict "Component" . 
+                                                            "CardTitle" .Params.name
+                                                            "CardDetails" .Params.role
+                                                            "CardCategory" .Params.location
+                                                            "CardUrl" .RelPermalink
+                                                            "CardImage" .Params.profile_image
+                                                            "CardBadge" false
+                                                            "CardBadgeColour" "#999999"
+                                                            "CardBadgeLabel" "Hi"
+                                                            "CardBadgeLabelColour" "#ffffff") }}
+					
+				{{ end }}
+			{{ end }}
+		</div>
+</div>

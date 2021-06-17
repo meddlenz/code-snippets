@@ -2,10 +2,10 @@
 draft: false
 featured: true
 header:
-  heading: Building a Private Hugo Theme
+  heading: Post 3
   description:
-title: Post 1
-date: 2021-04-24T21:24:00Z
+title: Post 3
+date: 2021-08-12T21:24:00Z
 preview_text: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 post_category: hugo

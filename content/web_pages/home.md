@@ -10,7 +10,13 @@ page_sections:
   - label:
     section_heading: Introduction
     components:
-      - _component_type: Content Block
+      - _component_type: all-posts
+        heading: All Posts
+      - _component_type: featured-posts
+        heading: Featured Posts
+      - _component_type: recent-posts
+        heading: Recent Posts
+      - _component_type: content-block
         label: Building a Hugo Website
         heading: Building a Hugo Website
         content_html: >-
@@ -68,58 +74,14 @@ page_sections:
 
           </code>
 
-          </pre><p>&nbsp;</p><p>&nbsp;</p>
-      - _component_type: Content Block
-        label: Building a Hugo Website
-        heading: Building a Hugo Website
-        content_html: >-
-          <h4>Moose</h4><p>Lorem <a target="_blank" rel="noopener"
-          href="/page-2/">ipsum dolor </a>sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam,<em> quis nostrud </em>exercitation ullamco
-          laboris nisi ut aliquip ex ea <strong>commodo consequat</strong>. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.</p>
+          </pre>
   - label:
     section_heading: Secondary
     components:
-      - _component_type: Content Block
-        label: Building a Hugo Website
-        heading: Building a Hugo Website
-        content_html: >-
-          <p>Lorem <a target="_blank" rel="noopener" href="/page-2/">ipsum dolor
-          </a>sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam,<em> quis nostrud </em>exercitation ullamco laboris nisi ut
-          aliquip ex ea <strong>commodo consequat</strong>. Duis aute irure
-          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-          in culpa qui officia deserunt mollit anim id est
-          laborum.</p><ul><li>Incididunt ut labore et</li><li>Cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum</li><li>Exercitation ullamco laboris nisi ut aliquip ex
-          ea</li></ul>
-      - _component_type: Content Block
-        label: Building a Hugo Website
-        heading: Building a Hugo Website
-        content_html: >-
-          <p>Lorem <a target="_blank" rel="noopener" href="/page-2/">ipsum dolor
-          </a>sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam,<em> quis nostrud </em>exercitation ullamco laboris nisi ut
-          aliquip ex ea <strong>commodo consequat</strong>. Duis aute irure
-          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-          in culpa qui officia deserunt mollit anim id est
-          laborum.</p><ul><li>Incididunt ut labore et</li><li>Cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum</li><li>Exercitation ullamco laboris nisi ut aliquip ex
-          ea</li></ul>
-      - _component_type: Image Gallery
+      - _component_type: image-gallery
         label: Image Gallery
         heading: Image Gallery
+        column_number: 3
         images:
           - image: https://picsum.photos/seed/picsum/200/300
             description_text: >-
@@ -127,49 +89,42 @@ page_sections:
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
-            orientation: 'Landscape'
           - image: https://picsum.photos/200/300?grayscale
             description_text: >-
               Lorem ipsum dolor
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
-            orientation: 'Landscape'
           - image: https://picsum.photos/id/237/1200/650
             description_text: >-
               Lorem ipsum dolor
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
-            orientation: 'Landscape'
           - image: https://picsum.photos/id/236/200/300
             description_text: >-
               Lorem ipsum dolor
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
-            orientation: 'Landscape'
           - image: https://picsum.photos/id/235/200/300
             description_text: >-
               Lorem ipsum dolor
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
-            orientation: 'Landscape'
           - image: https://picsum.photos/id/234/200/700
             description_text: >-
               Lorem ipsum dolor
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
-            orientation: 'Landscape'
           - image: https://picsum.photos/id/233/200/300
             description_text: >-
               Lorem ipsum dolor
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
-            orientation: 'Landscape'
           - image: https://picsum.photos/id/900/300
             description_text: >-
               Lorem ipsum dolor
@@ -181,8 +136,6 @@ page_sections:
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
-            orientation: 'Landscape'
-        column_number: 3
 url: /
 _hide_content: true
 _enabled_editors:
