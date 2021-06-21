@@ -1,0 +1,21 @@
+{{ $n := "n-button" }}
+{{ if .LinkUrl }}
+    <a class="{{$n}} 
+    		  {{$n}}--{{ .ButtonVariant | urlize }}"
+    	href="{{ .LinkUrl }}"
+       {{ if .OpenInNew }}
+           target="_blank"
+       {{ end }}>
+       		<span class="{{$n}}__label">{{ .ButtonLabel }}</span>
+    </a>
+{{ else if .SubmitButton }}
+    <input class="{{$n}} 
+                  {{$n}}--{{ .ButtonVariant | urlize }}"
+           type="submit" 
+           value="{{ .ButtonLabel }}">
+{{ else }}
+    <span class="{{$n}} 
+    		  	 {{$n}}--{{ .ButtonVariant | urlize }}">
+       <span class="{{$n}}__label">{{ .ButtonLabel }}</span>
+    </span>
+{{ end }}

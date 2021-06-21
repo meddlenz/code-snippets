@@ -3,6 +3,8 @@ $primary_2: #B3384C;
 $primary_3: #7B8493;
 $primary_4: #53948B;
 $primary_5: #CFA656;
+$primary_6: rgba(0, 0, 0, 0.5); // Borders etc.
+$primary_7: rgba(0, 0, 0, 0.2); // Component fill
 
 // Breakpoints 
 $max-breakpoint: 1440px;
@@ -42,3 +44,10 @@ $fs-section-heading: 38px;
 $fs-section-heading-m: 30px;
 $fs-component-heading: 30px;
 $fs-component-heading-m: 22px;
+
+// Grids
+$gap-small: 10px;
+$gap-large: 18px;
+
+// Aspect Ratio
+$aspect: 56.25%;

@@ -1,0 +1,134 @@
+{{ $c := "c-form" }}
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	<form method="post"
+			  {{ if .Component.success_page_url }}
+			      action="{{ .Component.success_page_url }}"
+			  {{ else }}
+			      action="/success/"
+			  {{ end }}>
+		<fieldset class="{{$c}}__main">
+			{{ if .Component.form_ID }}
+				<input class="{{$c}}__hidden"
+					   type="text"
+					   name="{{ .Component.form_ID }}" 
+					   value="{{ .Component.form_ID }}" />
+			{{ end }}
+
+			{{ range $input_id, $input := .Component.form_components }}
+				{{ $type := ._input_type | urlize }}
+				{{ if eq "input-field" $type }}
+					<div class="{{$c}}__input-wrapper">
+						<label class="{{$c}}__label" for="{{ $input_id }}">{{ $input.label }}</label>
+						<input 
+							id="{{ $input_id }}"
+							{{ if $input.hide_user_input }}
+								type="password"
+							{{ else }}
+								type="text"
+							{{ end }} 
+							name="{{ $input.label | urlize }}" 
+							{{ if $input.placeholder }}
+								placeholder="{{ $input.placeholder }}" 
+							{{ end }}
+							{{ if $input.required }}
+								required
+							{{ end }} />
+					</div>
+				{{ else if eq "text-entry-field" $type }}
+					<div class="{{$c}}__textarea-wrapper">
+						<label class="{{$c}}__label" for="{{ $input_id }}">{{ $input.label }}</label>
+						<textarea 
+							id="{{ $input_id }}"
+							type="text" 
+							name="{{ $input.label | urlize }}" 
+							{{ if $input.placeholder }}
+								placeholder="{{ $input.placeholder }}"
+							{{ end }}
+							{{ if $input.text_box_height_number }}
+								rows="{{ $input.text_box_height_number }}"
+							{{ else }}
+								rows="6"
+							{{ end }}
+							{{ if $input.required }}
+								required
+							{{ end }} /></textarea>
+					</div>
+
+				{{ else if eq "radio-button-group" $type }}
+					<label class="{{$c}}__group-label">{{ $input.label }}</label>
+					<fieldset class="{{$c}}__radio-group-wrapper">
+						{{ range $radio_count, $input.radio_buttons }}
+							<label class="{{$c}}__label" 
+								for="{{ $input_id }}-{{ $radio_count }}">
+									<input 
+										id="{{ $input_id }}-{{ $radio_count }}" 
+										type="radio" 
+										name="options" 
+										value="{{ .label | urlize }}" 
+										{{ if $input.required }}
+											required 
+											{{ if eq 0 $radio_count }}
+												checked
+											{{ end }}
+										{{ end }}>
+									<span>{{ .label }}</span>
+							</label> 
+						{{ end }}
+					</fieldset>
+
+				{{ else if eq "check-box-group" $type }}
+					<label class="{{$c}}__group-label">{{ $input.label }}</label>
+					<fieldset class="{{$c}}__checkbox-group-wrapper">
+						{{ range $checkbox_count, $input.check_boxes }}
+							<label class="{{$c}}__label" 
+								for="{{ $input_id }}-{{ $checkbox_count }}">
+									<input 
+										id="{{ $input_id }}-{{ $checkbox_count }}" 
+										type="checkbox" 
+										name="{{ .label_html | urlize }}" 
+										{{ if .required }}
+											required
+										{{ end }}>
+									<span>{{ .label_html }}</span>
+							</label>
+						{{ end }}
+					</fieldset>
+
+				{{ else if eq "select-box" $type }}
+					<fieldset class="{{$c}}__selectbox-wrapper">
+						{{ $select_box_id := $input_id }}
+
+						<label class="{{$c}}__label" for="{{ $select_box_id }}">{{ $input.label }}</label>
+					 	<select id="{{ $select_box_id }}" name="_{{ $input.label }}">
+							{{ range $options_count, $input.options }}
+						  		<option value="{{ .option | urlize }}"
+						  				{{ if eq 0 $options_count }}
+						  					selected="selected"
+						  				{{ end }}>{{ .option }}</option>
+							{{ end }}
+						</select>=
+					</fieldset>
+				{{ end }}
+			{{ end }}
+
+			<input type="hidden" name="_to" value="{{ .Component.send_to_address }}" />
+			<input type="text" name="_gotcha" style="display: none;">
+			{{ if .Site._google_recaptcha_site_key }}
+				<div class="recaptcha-container">
+					<div class="g-recaptcha" data-sitekey="{{ .Site._google_recaptcha_site_key }}"></div>
+				</div>
+			{{ end }}
+
+
+			{{ partial "components/nested/button.html" (dict "Component" . 
+														 "SubmitButton" true
+	        											 "ButtonVariant" .Component.submit_button_variant
+	        											 "ButtonLabel" .Component.submit_button_label ) }}
+		</fieldset>
+	</form>
+</div>

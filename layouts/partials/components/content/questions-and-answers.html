@@ -1,0 +1,24 @@
+{{ $c := "c-questions-and-answers" }}
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	
+	<div class="{{$c}}__grid">
+		{{ range .Component.items }}
+			<div class="{{$c}}__grid-item
+						{{ if .text_alignment }}
+							{{$c}}__grid-item--{{ .text_alignment | urlize }}
+						{{ end }}">
+				<div class="{{$c}}__question">
+					{{ .question }}
+				</div>
+				<div class="{{$c}}__answer">
+					{{ .answer_html | safeHTML }}
+				</div>
+			</div>
+		{{ end }}
+	</div>
+</div>

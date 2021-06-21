@@ -73,19 +73,172 @@ params:
     components:
       style: modal
       values:
+        ################################################ Content
         - label: Content Block
           icon: event_available
           image:
+          tags:
+            - Content
           value:
-            _component_type: content-block
+            _component_type: Content Block
             label: Content Block
             heading: Content Block
             content_html:
-        - label: Image Gallery
+        - label: Text Grid
+          icon: event_available
+          image:
+          tags:
+            - Content
+          value:
+            _component_type: Text Grid
+            label: Text Grid
+            heading: Text Grid
+            grid_items:
+              - heading:
+                icon_image:
+                content_html:
+            icon_position:
+        - label: Content With Image
+          icon: event_available
+          image:
+          tags:
+            - Content
+          value:
+            _component_type: Content With Image
+            label: Content With Image
+            heading: Content With Image
+            content_html:
+            image_position: Left
+            image:
+        - label: Call To Action
+          icon: event_available
+          image:
+          tags:
+            - Content
+          value:
+            _component_type: Call To Action
+            label: Call To Action
+            heading: Call To Action
+            content_html:
+            image_position: Left
+            image:
+            background_color:
+        - label: Divider
           icon: event_available
           image:
           value:
-            _component_type: image-gallery
+            _component_type: Divider
+            label: Divider
+            display_divider: true
+        - label: Links with Images
+          icon: call_to_action
+          image:
+          tags:
+            - Content
+          value:
+            _component_type: Links with Images
+            label: Links with Images
+            heading: Links with Images
+            items:
+              - title:
+                image:
+                button_label:
+                button_variant:
+                link_url:
+                open_in_new_tab: false
+                badges:
+                  - badge_image:
+                    badge_label:
+        - label: Questions and Answers
+          icon: question_answer
+          image:
+          tags:
+            - Content
+          value:
+            _component_type: Questions and Answers
+            label: Questions and Answers
+            heading: Questions and Answers
+            text_alignment:
+            items:
+              - question:
+                answer_html:
+        - label: Big Numbered List
+          icon: format_list_numbered
+          image:
+          tags:
+            - Content
+          value:
+            _component_type: Big Numbered List
+            label: Big Numbered List
+            heading: Big Numbered List
+            list_items:
+              - item_text_html:
+        ################################################ Generic
+        - label: Buttons
+          icon: event_available
+          image:
+          tags:
+            - Generic
+          value:
+            _component_type: buttons
+            label: Buttons
+            heading: Buttons
+            buttons:
+              - button_label:
+                link_url:
+                open_in_new_tab: false
+                button_variant:
+        - label: Form
+          icon: layers
+          image:
+          tags:
+            - Content
+          value:
+            _component_type: Form
+            label: Form
+            heading: Form
+            form_ID:
+            send_to_address:
+            success_page_url: /success/
+            submit_button_label:
+            submit_button_variant:
+            form_components:
+        ################################################ Blog
+        - label: Featured Posts
+          icon: event_available
+          image:
+          tags:
+            - Blog
+          value:
+            _component_type: Featured Posts
+            label: Featured Posts
+            heading: Featured Posts
+        - label: Recent Posts
+          icon: event_available
+          image:
+          tags:
+            - Blog
+          value:
+            _component_type: Recent Posts
+            label: Recent Posts
+            heading: Recent Posts
+        - label: All Posts
+          icon: event_available
+          image:
+          tags:
+            - Blog
+          value:
+            _component_type: All Posts
+            label: All Posts
+            heading: All Posts
+        ################################################ Media
+        - label: Image Gallery
+          icon: event_available
+          image:
+          tags:
+            - Media
+          value:
+            _component_type: Image Gallery
             label: Image Gallery
             heading: Image Gallery
             column_number: 3
@@ -99,6 +252,70 @@ params:
         value:
           title:
           page_link:
+
+
+
+
+
+  #### Select Data ####
+
+  form_components:
+    - label: Input Field
+      icon: crop_16_9
+      value:
+        _input_type: Input Field
+        label:
+        placeholder:
+        required: false
+        hide_user_input: false
+    - label: Text Entry Field
+      icon: crop_square
+      value:
+        _input_type: Text Entry Field
+        label:
+        placeholder:
+        text_box_height_number: 6
+        required: false
+    - label: Radio Button Group
+      icon: radio_button_checked
+      value:
+        _input_type: Radio Button Group
+        label:
+        required: false
+        radio_buttons:
+          - label:
+    - label: Check Box Group
+      icon: check_box
+      value:
+        _input_type: Check Box Group
+        label:
+        check_boxes:
+          - label_html:
+            required: false
+    - label: Select Box
+      icon: menu_open
+      value:
+        _input_type: Select Box
+        label:
+        options:
+          - option:
+  text_alignments:
+    - Left
+    - Center
+    - Right
+  image_positions:
+    - Left
+    - Right
+  icon_positions:
+    - Left
+    - Right
+    - Top
+    - Bottom
+  button_variants:
+    - Branded
+    - Branded Inverse
+    - Custom Theme Override
+    - Plain Text
   _comments:
     use_submenu_for_collection: >-
       "Creates a submenu populated from items within the chosen collection. Disables the main URL above one has been set, and any items in the 'Submenu' option below will be ignored."

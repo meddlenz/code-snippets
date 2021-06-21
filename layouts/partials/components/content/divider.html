@@ -1,0 +1,6 @@
+{{ $c := "c-divider" }}
+<div class="{{$c}}">
+	{{ if .Component.display_divider }}
+		<div class="{{$c}}__line"></div>
+	{{ end }}
+</div>

@@ -1,0 +1,12 @@
+{{ $c := "c-call-to-action" }}
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	
+	<div class="{{$c}}__content">
+		{{ .Component.content_html | safeHTML }}
+	</div>
+</div>

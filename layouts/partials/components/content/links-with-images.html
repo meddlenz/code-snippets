@@ -1,0 +1,68 @@
+{{ $c := "c-links-with-images" }}
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	
+	<div class="{{$c}}__grid">
+		{{ range .Component.items }}
+			{{ if .link_url }}
+				<a class="{{$c}}__grid-item"
+					href="{{ .link_url }}"
+					{{ if .open_in_new_tab }}
+						target="_blank"
+					{{ end }}>
+					{{ if .image }}
+						<div class="{{$c}}__image-wrapper">
+							<div class="{{$c}}__spacer"></div>
+							<img src="{{ .image }}" alt="{{ .title }}" />
+							<div class="{{$c}}__badges">
+								{{ range .badges }}
+									<img class="{{$c}}__badge" 
+										 src="{{ .image }}"
+										 title="{{ .badge_label }}"
+										 alt="{{ .badge_label }}" />
+								{{ end }}
+							</div>
+						</div>
+					{{ end }}
+					<div class="{{$c}}__title-block">
+						<span class="{{$c}}__title">{{ .title }}</span>
+						{{ partial "components/nested/button.html" (dict "Component" .
+					        											 "ButtonVariant" .button_variant
+					        											 "LinkUrl" .link_url
+					        											 "OpenInNew" .open_in_new_tab
+					        											 "ButtonLabel" .button_label ) }}
+					</div>
+				</a>
+			{{ else }}
+				<div class="{{$c}}__grid-item">
+					{{ if .image }}
+						<div class="{{$c}}__image-wrapper">
+							<div class="{{$c}}__spacer"></div>
+							<img src="{{ .image }}" alt="{{ .title }}" />
+							<div class="{{$c}}__badges">
+								{{ range .badges }}
+									<img class="{{$c}}__badge" 
+										 src="{{ .image }}"
+										 title="{{ .badge_label }}"
+										 alt="{{ .badge_label }}" />
+								{{ end }}
+							</div>
+						</div>
+					{{ end }}
+					<div class="{{$c}}__title-block">
+						<span class="{{$c}}__title">{{ .title }}</span>
+						{{ partial "components/nested/button.html" (dict "Component" .
+					        											 "ButtonVariant" .button_variant
+					        											 "LinkUrl" .link_url
+					        											 "OpenInNew" .open_in_new_tab
+					        											 "ButtonLabel" .button_label ) }}
+					</div>
+				</div>
+			{{ end }}
+		{{ end }}
+	</div>
+</div>

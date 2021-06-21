@@ -78,7 +78,7 @@ page_sections:
   - label:
     section_heading: Secondary
     components:
-      - _component_type: image-gallery
+      - _component_type: Image Gallery
         label: Image Gallery
         heading: Image Gallery
         column_number: 3
@@ -136,6 +136,72 @@ page_sections:
               sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.
             url: https://google.com
+      - _component_type: Image Gallery
+        label: Image Gallery
+        heading: Image Gallery 2
+        column_number: 3
+        images:
+          - image:
+            description_text:
+            url:
+      - _component_type: Text Grid
+        label: Text Grid
+        heading: Text Grid
+        grid_items:
+          - heading:
+            icon_image:
+            content_html:
+        icon_position:
+      - _component_type: Content With Image
+        label: Content With Image
+        heading: Content With Image
+        content_html:
+        image_position: Left
+        image:
+      - _component_type: Call To Action
+        label: Call To Action
+        heading: Call To Action
+        content_html:
+        image_position: Left
+        image:
+        background_color:
+      - _component_type: Divider
+        label: Divider
+        display_divider: true
+      - _component_type: Links with Images
+        label: Links with Images
+        heading: Links with Images
+        items:
+          - title:
+            image:
+            button_label:
+            button_variant:
+            link_url:
+            open_in_new_tab: false
+            badges:
+              - badge_image:
+                badge_label:
+      - _component_type: Questions and Answers
+        label: Questions and Answers
+        heading: Questions and Answers
+        text_alignment:
+        items:
+          - question:
+            answer_html:
+      - _component_type: Big Numbered List
+        label: Big Numbered List
+        heading: Big Numbered List
+        list_items:
+          - item_text_html:
+      - _component_type: Form
+        label: Form
+        heading: Form
+        form_ID:
+        send_to_address:
+        success_page_url: /success/
+        submit_button_label:
+        submit_button_variant:
+        form_components:
 url: /
 _hide_content: true
 _enabled_editors:

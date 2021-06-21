@@ -1,0 +1,18 @@
+.c-content-with-image {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	&--right {
+		flex-flow: row-reverse wrap;
+	}
+
+	&__image-wrapper {
+		flex: 1 40%;
+	}
+
+	&__content-wrapper {
+		flex: 1 40%;
+	}
+
+}

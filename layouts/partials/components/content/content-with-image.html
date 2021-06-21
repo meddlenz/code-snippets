@@ -1,0 +1,20 @@
+{{ $c := "c-content-with-image" }}
+<div class="{{$c}}
+			{{$c}}--{{ .Component.image_position | urlize }} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	{{ if .Component.image }}
+		<div class="{{$c}}__image-wrapper">
+			<img src="{{ .Component.image }}" alt="{{ if .Component.heading }}{{ .Component.heading }}{{ else }}{{ .Component.content_html | safeHTML | truncate 100 }}{{ end }}" />
+		</div>
+	{{ end }}
+	<div class="{{$c}}__content-wrapper">
+		{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	
+		<div class="{{$c}}__content">
+			{{ .Component.content_html | safeHTML }}
+		</div>
+	</div>
+</div>

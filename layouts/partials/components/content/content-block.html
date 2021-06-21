@@ -4,10 +4,8 @@
 		   	cms-editor-link" 
 	 data-cms-editor-link-style="modal" 
 	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
-	{{ if .Component.heading }}
-		<h1 class="component-heading">{{ .Component.heading }}</h1>
-	{{ end }}
-
+	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	
 	<div class="{{$c}}__content">
 		{{ .Component.content_html | safeHTML }}
 	</div>

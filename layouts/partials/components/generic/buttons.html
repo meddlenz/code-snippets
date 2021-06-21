@@ -1,0 +1,11 @@
+{{ $c := "c-buttons" }}
+<div class="{{$c}}">
+	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	{{ range $button := .Component.buttons }}
+        {{ partial "components/nested/button.html" (dict "Component" . 
+	        											 "ButtonVariant" $button.button_variant
+	        											 "LinkUrl" $button.link_url
+	        											 "OpenInNew" $button.open_in_new_tab
+	        											 "ButtonLabel" $button.button_label ) }}
+	{{ end }}
+</div>

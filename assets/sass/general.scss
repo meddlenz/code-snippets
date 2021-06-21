@@ -171,6 +171,11 @@ code {
 
 .component {
 	margin-bottom: 75px;
+
+	&-fill {
+		border: 1px solid $primary_6;
+		background-color: $primary_7;
+	}
 }
 
 .component-heading {

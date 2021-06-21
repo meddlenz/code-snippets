@@ -3,7 +3,8 @@
     {{ range $section_count, $section := .Params.page_sections }}
         <div class="page-section">
             {{ if $section.section_heading }}
-                <h1 class="section-heading
+                <h1 id="{{ anchorize $section.section_heading }}"
+                    class="section-heading
                            cms-editor-link" 
                     data-cms-editor-link-style="modal" 
                     data-cms-editor-link="cloudcannon:#page_sections[{{ $section_count }}]">{{ $section.section_heading }}</h1>
@@ -11,33 +12,77 @@
             <div class="components">
                 {{ range $component_count, $component := $section.components }}
 
-                    {{ if eq "content-block" $component._component_type }}
-                        {{ partial "components/content-block.html" (dict "Component" . 
+                    <!--------------------------- Content --------------------------->
+                    {{ if eq "content-block" ($component._component_type | urlize ) }}
+                        {{ partial "components/content/content-block.html" (dict "Component" . 
                                                                          "section_count" $section_count 
                                                                          "component_count" $component_count) }}
-                    {{ else if eq "image-gallery" $component._component_type}}
-                        {{ partial "components/image-gallery.html" (dict "Component" . 
+                    {{ else if eq "content-with-image" ($component._component_type | urlize ) }}
+                        {{ partial "components/content/content-with-image.html" (dict "Component" . 
                                                                          "section_count" $section_count 
                                                                          "component_count" $component_count) }}
-                    {{ else if eq "all-posts" $component._component_type}}
-                        {{ partial "components/cards.html" (dict "Component" . 
+                    {{ else if eq "call-to-action" ($component._component_type | urlize ) }}
+                        {{ partial "components/content/call-to-action.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+                    {{ else if eq "text-grid" ($component._component_type | urlize ) }}
+                        {{ partial "components/content/text-grid.html" (dict "Component" .
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+                    {{ else if eq "divider" ($component._component_type | urlize ) }}
+                        {{ partial "components/content/divider.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+                    {{ else if eq "links-with-images" ($component._component_type | urlize ) }}
+                        {{ partial "components/content/links-with-images.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+                    {{ else if eq "questions-and-answers" ($component._component_type | urlize ) }}
+                        {{ partial "components/content/questions-and-answers.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+                    {{ else if eq "big-numbered-list" ($component._component_type | urlize ) }}
+                        {{ partial "components/content/big-numbered-list.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+
+                    <!--------------------------- Media --------------------------->
+                    {{ else if eq "image-gallery" ($component._component_type | urlize ) }}
+                        {{ partial "components/media/image-gallery.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+
+                    <!--------------------------- Generic --------------------------->
+
+                    {{ else if eq "buttons" ($component._component_type | urlize ) }}
+                        {{ partial "components/generic/buttons.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+                    {{ else if eq "form" ($component._component_type | urlize ) }}
+                        {{ partial "components/generic/form.html" (dict "Component" . 
+                                                                         "section_count" $section_count 
+                                                                         "component_count" $component_count) }}
+
+                    <!--------------------------- Blog --------------------------->
+                    {{ else if eq "all-posts" ($component._component_type | urlize )}}
+                        {{ partial "components/generic/cards.html" (dict "Component" . 
                                                                  "section_count" $section_count 
                                                                  "component_count" $component_count
                                                                  "CollectionName" "posts") }}
-                    {{ else if eq "featured-posts" $component._component_type}}
-                        {{ partial "components/cards.html" (dict "Component" . 
+                    {{ else if eq "featured-posts" ($component._component_type | urlize )}}
+                        {{ partial "components/generic/cards.html" (dict "Component" . 
                                                                  "section_count" $section_count 
                                                                  "component_count" $component_count
                                                                  "CollectionName" "posts"
                                                                  "Featured" true) }}
-                    {{ else if eq "recent-posts" $component._component_type}}
-                        {{ partial "components/cards.html" (dict "Component" . 
+                    {{ else if eq "recent-posts" ($component._component_type | urlize )}}
+                        {{ partial "components/generic/cards.html" (dict "Component" . 
                                                                  "section_count" $section_count 
                                                                  "component_count" $component_count
                                                                  "CollectionName" "posts"
                                                                  "Recent" true) }}
                     {{ else }}
-                        <h3 style="text-align: center;color: red;">Component Error: Unset</h3>
+                        <h3 style="text-align: center;color: red;">Component Error: Unset ({{ $component._component_type }})</h3>
                     {{ end }}
 
                 {{ end }}

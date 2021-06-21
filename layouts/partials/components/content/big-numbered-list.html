@@ -1,0 +1,14 @@
+{{ $c := "c-big-numbered-list" }}
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+
+	<ul class="{{$c}}__list">
+		{{ range .Component.list_items }}
+			<li class="{{$c}}__list-item">{{ .item_text_html | safeHTML }}
+		{{ end }}
+	</ul>
+</div>

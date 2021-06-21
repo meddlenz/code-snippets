@@ -1,0 +1,27 @@
+{{ $c := "c-text-grid" }}
+<div class="{{$c}} 
+			component
+		   	cms-editor-link" 
+	 data-cms-editor-link-style="modal" 
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
+	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	
+	<div class="{{$c}}__grid
+				{{ if .Component.icon_position }}
+					{{$c}}__grid--{{ .Component.icon_position | urlize }}
+				{{ end }}">
+		{{ range .Component.grid_items }}
+			<div class="{{$c}}__grid-item">
+				<div class="{{$c}}__heading-block">
+					{{ if .icon_image }}
+						<img src="{{ .icon_image }}" alt="{{ .heading }}" />
+					{{ end }}
+					<h3>{{ .heading }}</h3>
+				</div>
+				<div class="{{$c}}__content">
+					{{ .content_html | safeHTML }}
+				</div>
+			</div>
+		{{ end }}
+	</div>
+</div>
