@@ -1,8 +1,8 @@
 .c-text-grid { $c: &;
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(2,1fr);
-		column-gap: $body_min_padding;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-gap: $gap-medium;
 
 		&--top {
 			#{$c}__heading-block {
@@ -13,8 +13,8 @@
 
 		&--right {
 			#{$c}__heading-block {
-				flex-direction: row-reverse;
-				justify-content: space-between;
+				flex-direction: row;
+				justify-content: flex-end;
 			}
 		}
 
@@ -27,7 +27,6 @@
 	}
 
 	&__grid-item {
-
 	}
 
 	&__heading-block {
@@ -42,11 +41,14 @@
 		}
 
 		h3 {
-			margin: 0;
+			margin: $gap-small 0;
+			padding: $gap-small;
 		}
 	}
 
 	&__content {
-
+		p:first-child {
+			margin-top: 0;
+		}
 	}
 }

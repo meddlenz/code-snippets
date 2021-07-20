@@ -8,25 +8,26 @@
 	
 	<div class="{{$c}}__grid">
 		{{ range .Component.items }}
+
 			{{ if .link_url }}
-				<a class="{{$c}}__grid-item"
-					href="{{ .link_url }}"
-					{{ if .open_in_new_tab }}
-						target="_blank"
-					{{ end }}>
+				<div class="{{$c}}__grid-item">
 					{{ if .image }}
-						<div class="{{$c}}__image-wrapper">
+						<a class="{{$c}}__image-wrapper"
+							href="{{ .link_url }}"
+							{{ if .open_in_new_tab }}
+								target="_blank"
+							{{ end }}>
 							<div class="{{$c}}__spacer"></div>
-							<img src="{{ .image }}" alt="{{ .title }}" />
+							<img class="{{$c}}__main-image" src="{{ .image }}" alt="{{ .title }}" />
 							<div class="{{$c}}__badges">
 								{{ range .badges }}
 									<img class="{{$c}}__badge" 
-										 src="{{ .image }}"
+										 src="{{ .badge_image }}"
 										 title="{{ .badge_label }}"
 										 alt="{{ .badge_label }}" />
 								{{ end }}
 							</div>
-						</div>
+						</a>
 					{{ end }}
 					<div class="{{$c}}__title-block">
 						<span class="{{$c}}__title">{{ .title }}</span>
@@ -36,7 +37,7 @@
 					        											 "OpenInNew" .open_in_new_tab
 					        											 "ButtonLabel" .button_label ) }}
 					</div>
-				</a>
+				</div>
 			{{ else }}
 				<div class="{{$c}}__grid-item">
 					{{ if .image }}

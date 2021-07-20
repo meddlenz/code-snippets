@@ -1,3 +1,9 @@
 .c-divider {
-	
+	margin: 0 auto;
+	// @include scale-custom(margin-top, $spacing-small, $spacing-large, $min-breakpoint, $max-breakpoint);
+	// @include scale-custom(margin-bottom, $spacing-small, $spacing-large, $min-breakpoint, $max-breakpoint);
+	width: 80%;
+	height: 0;
+	border-bottom: 1px solid $primary_6;
+	opacity: 0.5;
 }

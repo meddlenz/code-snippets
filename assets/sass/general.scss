@@ -22,9 +22,11 @@ body {
 	background-color: $primary_1;
 	color: $primary_3;
 	@include scale-custom(font-size, $fs-content-m, $fs-content, $min-breakpoint, $max-breakpoint);
+	overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
+	margin: $heading-margin 0;
 	color: $primary_2;
 	line-height: 120%;
 }
@@ -96,6 +98,10 @@ table {
 	}
 }
 
+img {
+	max-width: 100%;
+}
+
 [data-language] {
 	position: relative;
 	margin: 25px 0;
@@ -104,19 +110,25 @@ table {
 		position: absolute;
 		top: 0;
 		content: 'Code: ' attr(data-language);
-		padding: 2px 5px;
+		padding: 2px 50px 5px 2px;
 		width: 100%;
-		box-sizing: border-box;
+		max-width: 65vw;
 		background-color: rgba(0,0,0,0.2);
 		color: rgba(255,255,255,0.2);
 	}
 }
 
+pre {
+}
+
 code {
-	background-color: rgba(0,0,0,0.2);
-	padding: 50px 25px 25px 25px;
 	display: block;
+	padding: 50px 25px 25px 25px;
 	border: 1px solid rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.2);
+	max-width: 65vw;
+	width: 100%;
+	overflow-x: auto;
 }
 
 .body-wrapper {
@@ -165,12 +177,14 @@ code {
 
 .section-heading {
 	display: inline-block;
+	margin: 0;
 	border-bottom: 4px solid $primary_2;
 	@include scale-custom(font-size, $fs-section-heading-m, $fs-section-heading, $min-breakpoint, $max-breakpoint);
 }
 
 .component {
-	margin-bottom: 75px;
+	@include scale-custom(padding-top, $spacing-small, $spacing-large, $min-breakpoint, $max-breakpoint);
+	@include scale-custom(padding-bottom, $spacing-small, $spacing-large, $min-breakpoint, $max-breakpoint);
 
 	&-fill {
 		border: 1px solid $primary_6;
@@ -179,6 +193,7 @@ code {
 }
 
 .component-heading {
+	margin-top: 0;
 	@include scale-custom(font-size, $fs-component-heading-m, $fs-component-heading, $min-breakpoint, $max-breakpoint);
 }
 

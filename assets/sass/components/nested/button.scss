@@ -1,3 +1,31 @@
-.n-button {
+.n-button, input.n-button {
+	display: flex;
+	align-items: center;
+	margin: 5px;
+	padding: 12px 16px;
+	background-color: $primary_7;
+	border: 1px solid $primary_6;
+	line-height: 100%;
+	color: $primary_3;
+	cursor: pointer;
+}
+
+a.n-button, input.n-button {
+	color: $primary_3;
 	
+	&:hover {
+		color: $primary_3;
+		background-color: $primary_6;
+	}
+
+	&:active {
+		filter: brightness(60%);
+	}
+}
+
+input.n-button {
+	margin: 0 auto;
+	padding-left: $gap-large * 2;
+	padding-right: $gap-large * 2;
+	width: auto;
 }

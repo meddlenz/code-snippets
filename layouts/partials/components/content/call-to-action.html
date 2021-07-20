@@ -1,12 +1,31 @@
 {{ $c := "c-call-to-action" }}
 <div class="{{$c}} 
+			{{$c}}--{{ .Component.image_position | urlize }}
 			component
 		   	cms-editor-link" 
 	 data-cms-editor-link-style="modal" 
-	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]">
-	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+	 data-cms-editor-link="cloudcannon:#page_sections[{{ .section_count }}].components[{{ .component_count }}]"
+	 style="color: {{ .Component.background_colour }}">
 	
-	<div class="{{$c}}__content">
-		{{ .Component.content_html | safeHTML }}
+
+	<div class="{{$c}}__image-wrapper">
+		<img src="{{ .Component.image }}" alt="{{ .Component.heading }}" />
+	</div>
+	
+	<div class="{{$c}}__content-wrapper">
+		{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
+		<div class="{{$c}}__content">
+			{{ .Component.content_html | safeHTML }}
+		</div>
+		<div class="{{$c}}__buttons"> 
+			{{ range $button := .Component.buttons }}
+		        {{ partial "components/nested/button.html" (dict "Component" . 
+			        											 "ButtonVariant" $button.button_variant
+			        											 "LinkUrl" $button.link_url
+			        											 "OpenInNew" $button.open_in_new_tab
+			        											 "ButtonLabel" $button.button_label ) }}
+				
+			{{ end }}
+		</div>
 	</div>
 </div>

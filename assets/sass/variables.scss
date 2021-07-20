@@ -1,14 +1,14 @@
 $primary_1: #0E2934;
 $primary_2: #B3384C;
-$primary_3: #7B8493;
-$primary_4: #53948B;
-$primary_5: #CFA656;
+$primary_3: #7B8493; // General Text
+$primary_4: #53948B; // Links
+$primary_5: #CFA656; // Secondary text (yellow)
 $primary_6: rgba(0, 0, 0, 0.5); // Borders etc.
 $primary_7: rgba(0, 0, 0, 0.2); // Component fill
 
 // Breakpoints 
 $max-breakpoint: 1440px;
-$mid-breakpoint: 750px;
+$mid-breakpoint: 850px;
 $min-breakpoint: 375px;
 
 // Navigation
@@ -32,7 +32,7 @@ $trans-longer: $timing-longer ease-in-out;
 
 // Fonts
 $fs-content: 18px;
-$fs-content-m: 116px;
+$fs-content-m: 16px;
 $fs-content-s: 14px;
 $fs-h1: 38px;
 $fs-h1-m: 30px;
@@ -45,9 +45,16 @@ $fs-section-heading-m: 30px;
 $fs-component-heading: 30px;
 $fs-component-heading-m: 22px;
 
+$heading-margin: 25px;
+
 // Grids
 $gap-small: 10px;
-$gap-large: 18px;
+$gap-medium: 18px;
+$gap-large: 30px;
 
 // Aspect Ratio
 $aspect: 56.25%;
+
+// Component Spacing
+$spacing-large: 75px;
+$spacing-small: 50px;

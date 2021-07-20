@@ -1,14 +1,41 @@
-.c-content-with-image {
+.c-content-with-image { $c: &;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 
+	@include tablet {
+		flex-direction: column;
+	}
+
 	&--right {
 		flex-flow: row-reverse wrap;
+
+		@include tablet {
+			flex-direction: column;
+		}
+
+		#{$c}__image-wrapper {
+			padding: 0 0 0 $gap-large;
+
+			@include tablet {
+				padding: 0;
+			}
+		}
 	}
 
 	&__image-wrapper {
 		flex: 1 40%;
+		padding: 0 $gap-large 0 0;
+		@include scale-custom(margin-top, ($fs-section-heading-m + ($heading-margin * 2)), ($fs-section-heading + ($heading-margin * 2)), $min-breakpoint, $max-breakpoint);
+
+		@include tablet {
+			padding: 0;
+		}
+		
+		img {
+			max-width: 100%;
+			object-fit: contain;
+		}
 	}
 
 	&__content-wrapper {

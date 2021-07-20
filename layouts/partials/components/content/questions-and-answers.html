@@ -7,12 +7,14 @@
 	{{ partial "components/nested/component-heading.html" (dict "Heading" .Component.heading) }}
 	
 	<div class="{{$c}}__grid">
+		{{ $component := .Component }}
 		{{ range .Component.items }}
-			<div class="{{$c}}__grid-item
-						{{ if .text_alignment }}
-							{{$c}}__grid-item--{{ .text_alignment | urlize }}
+			<div class="{{$c}}__grid-item 
+						{{ if $component.text_alignment }}
+							{{$c}}__grid-item--{{ $component.text_alignment | urlize }}
 						{{ end }}">
-				<div class="{{$c}}__question">
+				<div class="{{$c}}__question"
+					 style="color: {{ $component.question_text_colour }}">
 					{{ .question }}
 				</div>
 				<div class="{{$c}}__answer">
@@ -20,5 +22,7 @@
 				</div>
 			</div>
 		{{ end }}
+		<div class="{{$c}}__grid-item {{$c}}__grid-item--filler">
+		</div>
 	</div>
 </div>

@@ -1,9 +1,15 @@
 .c-questions-and-answers {
 	&__grid {
-
+		display: flex;
+		flex-flow: row wrap;
+		margin: -$gap-medium;
 	}
 
 	&__grid-item {
+		flex: 1 375px;
+		margin: $gap-medium;
+		padding-left: $gap-medium;
+		border-left: 6px solid $primary_7;
 		text-align: left;
 
 		&--center {
@@ -13,5 +19,15 @@
 		&--right {
 			text-align: right
 		}
+
+		&--filler {
+			height: 0;
+			border-color: transparent;
+		}
+	}
+
+	&__question {
+		font-style: italic;
+		color: $primary_5;
 	}
 }

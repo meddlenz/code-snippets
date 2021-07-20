@@ -10,14 +10,12 @@
 	height: 100%;
 
 	@include tablet {
-		left: -$nav_width;
-		max-width: $nav_width;
+		display: none;
 	}
 
 	&__nav-items {
 		margin: 0;
 		padding: 0;
-		height: 100%;
 		border-right: 1px solid $primary_2;
 		list-style: none;
 	}

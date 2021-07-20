@@ -2,7 +2,7 @@
 
 	&__card-grid {
 		display: grid;
-		grid-template-columns: repeat(3,1fr);
-		column-gap: $body_min_padding;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-gap: $gap-medium;
 	}
 }

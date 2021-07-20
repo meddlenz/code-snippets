@@ -1,3 +1,78 @@
-.c-call-to-action {
-	
+.c-call-to-action { $c: &;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	background-color: currentColor;
+	position: relative;
+
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: currentColor;
+	}
+
+	&:after {
+		left: unset;
+		right: -100%;
+	}
+
+	@include tablet {
+		flex-direction: column;
+	}
+
+	&--right {
+		flex-flow: row-reverse wrap;
+
+		@include tablet {
+			flex-direction: column;
+		}
+
+		#{$c}__image-wrapper {
+			padding: 0 0 0 $gap-large;
+
+			@include tablet {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	&__image-wrapper {
+		flex: 1 40%;
+		padding: 0 $gap-large 0 0;
+		@include scale-custom(margin-top, ($fs-section-heading-m + ($heading-margin)), ($fs-section-heading + ($heading-margin)), $min-breakpoint, $max-breakpoint);
+
+		@include tablet {
+			margin: 0;
+			padding: 0;
+		}
+		
+		img {
+			max-width: 100%;
+			object-fit: contain;
+
+			@include tablet {
+				max-height: 300px;
+				width: 100%;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+	}
+
+	&__content-wrapper {
+		flex: 1 40%;
+		color: $primary_3;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-flow: row wrap;
+		margin: -5px;
+	}
 }
