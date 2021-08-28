@@ -1,0 +1,10 @@
+#!/bin/bash
+npm install
+cp siteicon.png static/siteicon.png
+git config \
+  --global \
+  url."https://${user}:${personal_access_token}@github.com".insteadOf \
+  "https://github.com"
+hugo mod get -u
+  
+echo "PREBUILD"
